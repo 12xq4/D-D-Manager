@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_or_existing_player"
+        android:id="@+id/newOrExistingPlayer"
+        android:textSize="100px"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:text="@string/new_player"
+        android:id="@+id/newPlayer"
+        android:layout_gravity="center_horizontal"
+        android:clickable="false"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/existingPlayer"
+        android:layout_alignStart="@+id/existingPlayer" />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:text="@string/existing_player"
+        android:id="@+id/existingPlayer"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/newPlayer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:clickable="false"
+        android:enabled="false" />
+</RelativeLayout>

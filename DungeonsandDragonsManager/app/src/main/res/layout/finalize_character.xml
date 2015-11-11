@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_character"
+        android:id="@+id/yourCharacter"
+        android:layout_gravity="center_horizontal"
+        android:textSize="100px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/stat1"
+        android:layout_marginTop="75dp"
+        android:textSize="50px"
+        android:layout_below="@+id/yourCharacter"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/stat2"
+        android:textSize="50px"
+        android:layout_below="@+id/stat5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/stat3"
+        android:layout_below="@+id/stat2"
+        android:layout_centerHorizontal="true"
+        android:textSize="50px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/stat4"
+        android:textSize="50px"
+        android:layout_below="@+id/stat3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/stat5"
+        android:textSize="50px"
+        android:layout_below="@+id/stat1"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/characterDescription"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_play"
+        android:id="@+id/goPlay"
+        android:layout_below="@+id/characterDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp" />
+</RelativeLayout>
