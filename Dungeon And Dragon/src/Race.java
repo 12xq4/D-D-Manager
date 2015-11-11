@@ -19,14 +19,16 @@ public abstract class Race {
     public static final int CHA = 5;
     
     int speed;
-    int[] statBonus;
+    // int[] statBonus;
+    Stat stat;
     ArrayList<Skills> skillset;
     ArrayList<String> language;
     
     public Race () {
-        speed = 0;
-        statBonus = new int [6];    
+        this.stat = stat;
+        speed = 0; 
     }
+    
     
     
     abstract void setLanguage();

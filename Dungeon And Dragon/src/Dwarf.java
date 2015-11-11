@@ -11,9 +11,10 @@
 import java.util.ArrayList;
 public class Dwarf extends Race{
     
-    public Dwarf () {
+    public Dwarf (Stat stat) {
+        this.stat = stat;
         speed = 25;
-        statBonus[2] += 2;
+        stat.addCons(2);
         setLanguage();
         setSkills();
     }
