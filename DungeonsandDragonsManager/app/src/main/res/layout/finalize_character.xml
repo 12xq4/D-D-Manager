@@ -16,6 +16,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/myClass"
+        android:id="@+id/characterClass"
+        android:textSize="100px"
+        android:layout_below="@+id/yourCharacter"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/stat1"
         android:layout_marginTop="75dp"

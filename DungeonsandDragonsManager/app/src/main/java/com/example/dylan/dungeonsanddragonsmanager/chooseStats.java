@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 
 /**
  * Created by Dylan on 2015-10-25.
@@ -29,15 +31,13 @@ public class chooseStats extends Activity {
 
     TextView chooseStatsText;
 
-    private static final String IMAGEVIEW_TAG = "icon bitmap";
+    TextView point1, point2, point3;
 
-    ImageView number1, number2;
+    TextView strengthVal, conVal, dexVal, intVal, charismaVal, wisdomVal;
 
-    Bitmap.Config config;
+    //float currentx, currenty;
 
-    //RecyclerView listOfClasses = (RecyclerView)findViewById(R.id.listOfClasses);
-
-    //LinearLayoutManager llm;
+    //ImageView number1, number2;
 
     Button proceed;
 
@@ -49,14 +49,43 @@ public class chooseStats extends Activity {
         chooseStatsText = (TextView) findViewById(R.id.chooseStatsText);
 
         proceed = (Button) findViewById(R.id.statsProceedButton);
-        //proceed.setOnClickListener(new proceedButtonListener());
+        proceed.setOnClickListener(new proceedButtonListener());
 
-        number1 = (ImageView) findViewById(R.id.number1);
+        point1 = (TextView) findViewById(R.id.point1);
+        point1.setOnTouchListener(new MyTouchListener());
+
+        point2 = (TextView) findViewById(R.id.point2);
+        point2.setOnTouchListener(new MyTouchListener());
+
+        point3 = (TextView) findViewById(R.id.point3);
+        point3.setOnTouchListener(new MyTouchListener());
+
+        strengthVal = (TextView) findViewById(R.id.strengthValue);
+        strengthVal.setOnDragListener(new MyDragStrengthListener());
+        //strengthVal.setOnTouchListener(new MyTouchStrengthListener());
+
+        conVal = (TextView) findViewById(R.id.conValue);
+        conVal.setOnDragListener(new MyDragConListener());
+
+        dexVal = (TextView) findViewById(R.id.dexValue);
+        dexVal.setOnDragListener(new MyDragDexListener());
+
+        intVal = (TextView) findViewById(R.id.intValue);
+        intVal.setOnDragListener(new MyDragIntListener());
+
+        charismaVal = (TextView) findViewById(R.id.charismaValue);
+        charismaVal.setOnDragListener(new MyDragCharismaListener());
+
+        wisdomVal = (TextView) findViewById(R.id.wisdomValue);
+        wisdomVal.setOnDragListener(new MyDragWisdomListener());
+
+        /*number1 = (ImageView) findViewById(R.id.number1);
         number1.setImageResource(R.drawable.number1);
         number1.setOnTouchListener(new MyTouchListener());
 
         number2 = (ImageView) findViewById(R.id.number2);
         number2.setImageResource(R.drawable.number1);
+        number2.setOnDragListener(new MyDragListener());*/
 
     /*public void onItemSelected(AdapterView<?> parent, View view,
                                int pos, long id) {
@@ -75,12 +104,176 @@ public class chooseStats extends Activity {
                 View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
                 view.startDrag(data, shadowBuilder, view, 0);
                 view.setVisibility(View.VISIBLE);
+                //currentx = view.getX();
+                //currenty = view.getY();
                 return true;
             } else {
                 return false;
             }
         }
     };
+
+    /*private final class MyTouchStrengthListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                view.startDrag(data, shadowBuilder, view, 0);
+                view.setVisibility(View.VISIBLE);
+                strengthVal.setText(R.string.one);
+                point1.setX(currentx);
+                point1.setY(currenty);
+                point1.setText(R.string.one);
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };*/
+
+    private class MyDragStrengthListener implements OnDragListener {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int action = event.getAction();
+            switch (event.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    break;
+                case DragEvent.ACTION_DROP:
+                    View view = (View) event.getLocalState();
+                    view.setVisibility(View.INVISIBLE);
+                    strengthVal.setText(R.string.two);
+                case DragEvent.ACTION_DRAG_ENDED:
+                    return true;
+                default:
+                    break;
+            }
+            return true;
+        }
+    }
+
+    private class MyDragConListener implements OnDragListener {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int action = event.getAction();
+            switch (event.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    break;
+                case DragEvent.ACTION_DROP:
+                    View view = (View) event.getLocalState();
+                    view.setVisibility(View.INVISIBLE);
+                    conVal.setText(R.string.two);
+                case DragEvent.ACTION_DRAG_ENDED:
+                    break;
+                default:
+                    break;
+            }
+            return true;
+        }
+    }
+
+    private class MyDragDexListener implements OnDragListener {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int action = event.getAction();
+            switch (event.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    break;
+                case DragEvent.ACTION_DROP:
+                    View view = (View) event.getLocalState();
+                    view.setVisibility(View.INVISIBLE);
+                    dexVal.setText(R.string.two);
+                case DragEvent.ACTION_DRAG_ENDED:
+                    break;
+                default:
+                    break;
+            }
+            return true;
+        }
+    }
+
+    private class MyDragIntListener implements OnDragListener {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int action = event.getAction();
+            switch (event.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    break;
+                case DragEvent.ACTION_DROP:
+                    View view = (View) event.getLocalState();
+                    view.setVisibility(View.INVISIBLE);
+                    intVal.setText(R.string.two);
+                case DragEvent.ACTION_DRAG_ENDED:
+                    break;
+                default:
+                    break;
+            }
+            return true;
+        }
+    }
+
+    private class MyDragCharismaListener implements OnDragListener {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int action = event.getAction();
+            switch (event.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    break;
+                case DragEvent.ACTION_DROP:
+                    View view = (View) event.getLocalState();
+                    view.setVisibility(View.INVISIBLE);
+                    charismaVal.setText(R.string.two);
+                case DragEvent.ACTION_DRAG_ENDED:
+                    break;
+                default:
+                    break;
+            }
+            return true;
+        }
+    }
+
+    private class MyDragWisdomListener implements OnDragListener {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            int action = event.getAction();
+            switch (event.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    break;
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    break;
+                case DragEvent.ACTION_DRAG_EXITED:
+                    break;
+                case DragEvent.ACTION_DROP:
+                    View view = (View) event.getLocalState();
+                    view.setVisibility(View.INVISIBLE);
+                    wisdomVal.setText(R.string.two);
+                case DragEvent.ACTION_DRAG_ENDED:
+                    break;
+                default:
+                    break;
+            }
+            return true;
+        }
+    }
 
     private class proceedButtonListener implements View.OnClickListener {
         public void onClick(View v) {
@@ -89,75 +282,9 @@ public class chooseStats extends Activity {
         }
     };
 
-    private class MyDragListener implements OnDragListener {
-        //Drawable enterShape = getResources().getDrawable(R.drawable.shape_droptarget);
-        //Drawable normalShape = getResources().getDrawable(R.drawable.shape);
+    public void onBackPressed() {
 
-        @Override
-        public boolean onDrag(View v, DragEvent event) {
-            int action = event.getAction();
-            switch (event.getAction()) {
-                case DragEvent.ACTION_DRAG_STARTED:
-                    // do nothing
-                    if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
-
-                        // As an example of what your application might do,
-                        // applies a blue color tint to the View to indicate that it can accept
-                        // data.
-                        //v.setColorFilter(Color.BLUE);
-
-                        // Invalidate the view to force a redraw in the new tint
-                        v.invalidate();
-
-                        // returns true to indicate that the View can accept the dragged data.
-                        return true;
-
-                    }
-                    return false;
-                case DragEvent.ACTION_DRAG_ENTERED:
-                    //v.setColorFilter(Color.GREEN);
-
-                    // Invalidate the view to force a redraw in the new tint
-                    v.invalidate();
-
-                    return true;
-                case DragEvent.ACTION_DRAG_EXITED:
-                    //v.setColorFilter(Color.BLUE);
-
-                    // Invalidate the view to force a redraw in the new tint
-                    v.invalidate();
-
-                    return true;
-                case DragEvent.ACTION_DROP:
-                    ClipData.Item item = event.getClipData().getItemAt(0);
-
-                    // Gets the text data from the item.
-                    //dragData = item.getText();
-
-                    // Displays a message containing the dragged data.
-                    //Toast.makeText(this, "Dragged data is " + dragData, Toast.LENGTH_LONG);
-
-                    // Turns off any color tints
-                    //v.clearColorFilter();
-
-                    // Invalidates the view to force a redraw
-                    v.invalidate();
-
-                    // Returns true. DragEvent.getResult() will return true.
-                    return true;
-                case DragEvent.ACTION_DRAG_ENDED:
-                    //v.clearColorFilter();
-
-                    // Invalidates the view to force a redraw
-                    v.invalidate();
-
-                    // returns true; the value is ignored.
-                    return true;
-                default:
-                    break;
-            }
-            return true;
-        }
+        super.onBackPressed();
     }
 
 }

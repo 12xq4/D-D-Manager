@@ -20,6 +20,26 @@
     <string name="half_orc">Half-Orc</string>
     <string name="tiefling">Teifling</string>
 
+    <!-- Race Description -->
+    <string name="dwarf_description">Dwarves are bold, hardy creatures that typically roam in great
+        halls carved out of the sides of mountains.  Though they usually are under five feet tall,
+        they are so broad and compact they can weigh around the same as a human two feet taller.
+        Dwarves can live to be up to 400 years old, which grants them a perspective on the world
+        that shorter-lived races lack. Dwarven kingdoms stretch deep beneath the mountains where the
+        dwarves mine gems and precious metals, and forge items of wonder.  The chief unit of dwarven
+        society is the clan, and dwarves highly value social standing.  To be clanless is the worst
+        fate that can befall a dwarf.  Dwarves who take up the adventuring life might be motivated
+        by a desire for treasure, or the command or inspiration of a deity.  A dwarf might also seek
+        to restore a clan\'s lost honor, or avenge an ancient wrong the clan suffered.</string>
+    <string name="elf_description">The Elf is a...</string>
+    <string name="halfling_description">The Halfling is a...</string>
+    <string name="human_description">The Human is a...</string>
+    <string name="dragonborn_description">The Dragonborn is a...</string>
+    <string name="gnome_description">The Gnome is a...</string>
+    <string name="half_elf_description">The Half-Elf is a...</string>
+    <string name="half_orc_description">The Half-Orc is a...</string>
+    <string name="tiefling_description">The Tiefling is a...</string>
+
     <!-- Classes -->
     <string name="barbarian">Barbarian</string>
     <string name="bard">Bard</string>
@@ -33,11 +53,67 @@
     <string name="sorcerer">Sorcerer</string>
     <string name="warlock">Warlock</string>
     <string name="wizard">Wizard</string>
+
+    <!-- Class Description-->
+    <string name="barbarian_description">Barbarian description</string>
+    <string name="bard_description">Bard description</string>
+    <string name="cleric_description">Cleric description</string>
+    <string name="druid_description">Druid description</string>
+    <string name="fighter_description">Fighter description</string>
+    <string name="monk_description">Monk description</string>
+    <string name="paladin_description">Paladin description</string>
+    <string name="ranger_description">Ranger description</string>
+    <string name="rogue_description">Rogue description</string>
+    <string name="sorcerer_description">Sorcerer description</string>
+    <string name="warlock_description">Warlock description</string>
+    <string name="wizard_description">Wizard description</string>
+
     <string name="background_menu">Background Menu</string>
     <string name="stats">Drag and Drop the Numbers on the Icons to set the Stats</string>
 
     <string name="new_or_existing_player">New or Existing Player</string>
     <string name="your_character">Your Character</string>
     <string name="go_play">Go Play!</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="raceDescription">Description of Race</string>
 
+    <!-- Stats -->
+    <string name="wisdom">Wisdom</string>
+    <string name="charisma">Charisma</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="constitution">Constitution</string>
+    <string name="strength">Strength</string>
+
+    <string name="class_description">Description of Class</string>
+    <string name="myClass">class</string>
+
+    <!-- Backgrounds -->
+    <string name="acolyte">Acolyte</string>
+    <string name="charlatan">Charlatan</string>
+    <string name="criminal">Criminal</string>
+    <string name="entertainer">Entertainer</string>
+    <string name="folk_hero">Folk Hero</string>
+    <string name="guild_artisan">Guild Artisan</string>
+    <string name="hermit">Hermit</string>
+    <string name="noble">Noble</string>
+    <string name="outlander">Outlander</string>
+    <string name="sage">Sage</string>
+    <string name="sailor">Sailor</string>
+    <string name="urchin">Urchin</string>
+
+    <!-- Background Descriptions -->
+    <string name="acolyte_description">Acolyte description</string>
+    <string name="charlatan_description">Charlatan description</string>
+    <string name="criminal_description">Criminal description</string>
+    <string name="entertainer_description">Entertainer description</string>
+    <string name="folk_hero_description">Folk Hero description</string>
+    <string name="guild_artisan_description">Guild Artisan description</string>
+    <string name="hermit_description">Hermit description</string>
+    <string name="noble_description">Noble description</string>
+    <string name="outlander_description">Outlander description</string>
+    <string name="sage_description">Sage description</string>
+    <string name="sailor_description">Sailor description</string>
+    <string name="urchin_description">Urchin description</string>
 </resources>

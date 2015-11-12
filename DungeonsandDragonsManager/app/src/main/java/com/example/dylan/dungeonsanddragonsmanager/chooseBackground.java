@@ -3,9 +3,14 @@ package com.example.dylan.dungeonsanddragonsmanager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
+import android.text.method.ScrollingMovementMethod;
+import android.view.Display;
 import android.view.View;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -16,11 +21,13 @@ public class chooseBackground extends Activity {
 
     final Context context = this;
 
-    TextView chooseClassText;
+    TextView chooseBackgroundText;
 
-    //RecyclerView listOfClasses = (RecyclerView)findViewById(R.id.listOfClasses);
+    HorizontalScrollView hsr;
 
-    //LinearLayoutManager llm;
+    LinearLayout linearLayout;
+
+    TextView backgroundDescription;
 
     Button proceed;
 
@@ -29,17 +36,181 @@ public class chooseBackground extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_background);
 
-        chooseClassText = (TextView) findViewById(R.id.chooseBackgroundText);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+
+        backgroundDescription = (TextView) findViewById(R.id.backgroundDescription);
+        backgroundDescription.setMovementMethod(new ScrollingMovementMethod());
+
+        hsr = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
+
+        linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
+
+        chooseBackgroundText = (TextView) findViewById(R.id.chooseBackgroundText);
 
         proceed = (Button) findViewById(R.id.backgroundProceed);
         proceed.setOnClickListener(new proceedButtonListener());
 
-        //listOfClasses.setHasFixedSize(true);
+        display.getSize(size);
+        final int width = size.x;
 
-        //llm = new LinearLayoutManager(context);
-        //listOfClasses.setLayoutManager(llm);
+        final Button acolyteButton = new Button(this);
+        acolyteButton.setText(R.string.acolyte);
+        acolyteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (acolyteButton.getLeft() - (width / 2)) + (acolyteButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.acolyte_description);
+                proceed.setEnabled(true);
+            }
+        });
 
+        final Button charlatanButton = new Button(this);
+        charlatanButton.setText(R.string.charlatan);
+        charlatanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (charlatanButton.getLeft() - (width / 2)) + (charlatanButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.charlatan_description);
+                proceed.setEnabled(true);
+            }
+        });
 
+        final Button criminalButton = new Button(this);
+        criminalButton.setText(R.string.criminal);
+        criminalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (criminalButton.getLeft() - (width / 2)) + (criminalButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.criminal_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button entertainerButton = new Button(this);
+        entertainerButton.setText(R.string.entertainer);
+        entertainerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (entertainerButton.getLeft() - (width / 2)) + (entertainerButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.entertainer_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button folk_heroButton = new Button(this);
+        folk_heroButton.setText(R.string.folk_hero);
+        folk_heroButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (folk_heroButton.getLeft() - (width / 2)) + (folk_heroButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.folk_hero_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button guild_artisanButton = new Button(this);
+        guild_artisanButton.setText(R.string.criminal);
+        guild_artisanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (guild_artisanButton.getLeft() - (width / 2)) + (guild_artisanButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.guild_artisan_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button hermitButton = new Button(this);
+        hermitButton.setText(R.string.hermit);
+        hermitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (hermitButton.getLeft() - (width / 2)) + (hermitButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.hermit_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button nobleButton = new Button(this);
+        nobleButton.setText(R.string.noble);
+        nobleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (nobleButton.getLeft() - (width / 2)) + (nobleButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.noble_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button outlanderButton = new Button(this);
+        outlanderButton.setText(R.string.outlander);
+        outlanderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (outlanderButton.getLeft() - (width / 2)) + (outlanderButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.outlander_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button sageButton = new Button(this);
+        sageButton.setText(R.string.sage);
+        sageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (sageButton.getLeft() - (width / 2)) + (sageButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.sage_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        final Button sailorButton = new Button(this);
+        sailorButton.setText(R.string.sailor);
+        sailorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (sailorButton.getLeft() - (width / 2)) + (sailorButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.sailor_description);
+                proceed.setEnabled(true);
+                //Race race = new Dwarf(new Stat(1,2,3,4,5,6));
+            }
+        });
+
+        final Button urchinButton = new Button(this);
+        urchinButton.setText(R.string.urchin);
+        urchinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (urchinButton.getLeft() - (width / 2)) + (urchinButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundDescription.setText(R.string.urchin_description);
+                proceed.setEnabled(true);
+            }
+        });
+
+        linearLayout.addView(acolyteButton);
+        linearLayout.addView(charlatanButton);
+        linearLayout.addView(criminalButton);
+        linearLayout.addView(entertainerButton);
+        linearLayout.addView(folk_heroButton);
+        linearLayout.addView(guild_artisanButton);
+        linearLayout.addView(hermitButton);
+        linearLayout.addView(nobleButton);
+        linearLayout.addView(outlanderButton);
+        linearLayout.addView(sageButton);
+        linearLayout.addView(sailorButton);
+        linearLayout.addView(urchinButton);
     }
 
     private class proceedButtonListener implements View.OnClickListener {
@@ -47,16 +218,5 @@ public class chooseBackground extends Activity {
            Intent intent = new Intent(context, chooseStats.class);
            startActivity(intent);
      }
-    };/*
-    public void onItemSelected(AdapterView<?> parent, View view,
-                               int pos, long id) {
-        // An item was selected. You can retrieve the selected item using
-        // parent.getItemAtPosition(pos)
     }
-
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Another interface callback
-    }*/
-
-
 }
