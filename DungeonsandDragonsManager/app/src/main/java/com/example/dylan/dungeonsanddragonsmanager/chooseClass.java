@@ -36,6 +36,10 @@ public class chooseClass extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_class);
 
+
+        Intent intent = getIntent();
+        String[] myCharacter = intent.getStringArrayExtra("myCharacter");
+
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
 
