@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+// import android.support.v7.widget.LinearLayoutManager;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Display;
 import android.view.View;
@@ -17,7 +17,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.support.v7.widget.RecyclerView;
+// import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;

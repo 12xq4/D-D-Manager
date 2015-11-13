@@ -35,6 +35,8 @@ public class chooseStats extends Activity {
 
     TextView strengthVal, conVal, dexVal, intVal, charismaVal, wisdomVal;
 
+    String[] myCharacter;
+
     //float currentx, currenty;
 
     //ImageView number1, number2;
@@ -45,7 +47,8 @@ public class chooseStats extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_stats);
-
+        Intent intent = getIntent();
+        myCharacter = intent.getStringArrayExtra("myCharacter");
         chooseStatsText = (TextView) findViewById(R.id.chooseStatsText);
 
         proceed = (Button) findViewById(R.id.statsProceedButton);
@@ -278,6 +281,7 @@ public class chooseStats extends Activity {
     private class proceedButtonListener implements View.OnClickListener {
         public void onClick(View v) {
             Intent intent = new Intent(context, finalizeCharacter.class);
+            intent.putExtra("myCharacter", myCharacter);
             startActivity(intent);
         }
     };

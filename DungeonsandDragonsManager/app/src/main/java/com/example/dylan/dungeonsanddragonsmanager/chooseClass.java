@@ -31,6 +31,8 @@ public class chooseClass extends Activity {
 
     Button proceed;
 
+    String[] myCharacter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class chooseClass extends Activity {
 
 
         Intent intent = getIntent();
-        String[] myCharacter = intent.getStringArrayExtra("myCharacter");
+        myCharacter = intent.getStringArrayExtra("myCharacter");
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -67,6 +69,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.barbarian_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Barbarian";
             }
         });
 
@@ -79,6 +82,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.bard_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Bard";
             }
         });
 
@@ -91,6 +95,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.cleric_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Cleric";
             }
         });
 
@@ -103,6 +108,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.druid_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Druid";
             }
         });
 
@@ -115,6 +121,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.fighter_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Fighter";
             }
         });
 
@@ -127,6 +134,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.monk_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Monk";
             }
         });
 
@@ -139,6 +147,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.paladin_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Paladin";
             }
         });
 
@@ -151,6 +160,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.ranger_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Ranger";
             }
         });
 
@@ -163,6 +173,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.rogue_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Rogue";
             }
         });
 
@@ -175,6 +186,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.sorcerer_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Sorcerer";
             }
         });
 
@@ -187,6 +199,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.warlock_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Warlock";
             }
         });
 
@@ -199,6 +212,7 @@ public class chooseClass extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.wizard_description);
                 proceed.setEnabled(true);
+                myCharacter[1] = "Wizard";
             }
         });
 
@@ -219,6 +233,7 @@ public class chooseClass extends Activity {
     private class proceedButtonListener implements View.OnClickListener {
         public void onClick(View v) {
             Intent intent = new Intent(context, chooseBackground.class);
+            intent.putExtra("myCharacter", myCharacter);
             startActivity(intent);
         }
     };

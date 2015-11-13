@@ -23,10 +23,26 @@ public class finalizeCharacter extends Activity {
 
     Button play;
 
+    String[] myCharacter;
+
+    Stat playerStat;
+
+    Race playerRace;
+
+    Role playerClass;
+
+    Background playerBackground;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.finalize_character);
+
+        Intent intent = getIntent();
+        myCharacter = intent.getStringArrayExtra("myCharacter");
+        createRace();
+        createClass();
+        createBackground();
 
         yourCharacter = (TextView) findViewById(R.id.yourCharacter);
         stat1 = (TextView) findViewById(R.id.stat1);
@@ -50,6 +66,21 @@ public class finalizeCharacter extends Activity {
             startActivity(intent);
         }
     };*/
+
+    protected void createRace(){
+        if (myCharacter[0].equals("Dwarf"))
+            playerRace = new Dwarf(playerStat);
+    }
+
+    protected void createClass(){
+        if (myCharacter[1].equals("Barbarian"))
+            playerClass = new Barbarian(playerStat);
+    }
+
+    protected void createBackground(){
+        if (myCharacter[2].equals("Acolyte"))
+            playerBackground = new Acolyte();
+    }
 
 
 }
