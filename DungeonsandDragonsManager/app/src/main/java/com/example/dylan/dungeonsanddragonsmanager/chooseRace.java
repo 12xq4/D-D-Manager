@@ -61,8 +61,6 @@ public class chooseRace extends Activity {
 
         linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
 
-
-
         proceed = (Button) findViewById(R.id.raceProceed);
         proceed.setOnClickListener(new proceedButtonListener());
 

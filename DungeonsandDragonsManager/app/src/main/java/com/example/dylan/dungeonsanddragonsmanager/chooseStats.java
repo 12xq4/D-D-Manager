@@ -29,11 +29,17 @@ public class chooseStats extends Activity {
 
     final Context context = this;
 
+    String[] myCharacter = new String[3];
+
     TextView chooseStatsText;
 
-    TextView point1, point2, point3;
+    TextView point1, point2, point3, point4, point5, point6;
 
     TextView strengthVal, conVal, dexVal, intVal, charismaVal, wisdomVal;
+
+    int selected;
+
+    String[] selectedStats = new String[6];
 
     //float currentx, currenty;
 
@@ -46,19 +52,40 @@ public class chooseStats extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_stats);
 
+        Intent preIntent = getIntent();
+        Bundle bundle = preIntent.getExtras();
+
+        myCharacter = (String[]) bundle.get("myCharacter");
+
         chooseStatsText = (TextView) findViewById(R.id.chooseStatsText);
 
         proceed = (Button) findViewById(R.id.statsProceedButton);
         proceed.setOnClickListener(new proceedButtonListener());
 
+        // Points: 15, 14, 13, 12, 10, 8
         point1 = (TextView) findViewById(R.id.point1);
-        point1.setOnTouchListener(new MyTouchListener());
+        point1.setText("15");
+        point1.setOnTouchListener(new My15TouchListener());
 
         point2 = (TextView) findViewById(R.id.point2);
-        point2.setOnTouchListener(new MyTouchListener());
+        point2.setText("14");
+        point2.setOnTouchListener(new My14TouchListener());
 
         point3 = (TextView) findViewById(R.id.point3);
-        point3.setOnTouchListener(new MyTouchListener());
+        point3.setText("13");
+        point3.setOnTouchListener(new My13TouchListener());
+
+        point4 = (TextView) findViewById(R.id.point4);
+        point4.setText("12");
+        point4.setOnTouchListener(new My12TouchListener());
+
+        point5 = (TextView) findViewById(R.id.point5);
+        point5.setText("10");
+        point5.setOnTouchListener(new My10TouchListener());
+
+        point6 = (TextView) findViewById(R.id.point6);
+        point6.setText("8");
+        point6.setOnTouchListener(new My8TouchListener());
 
         strengthVal = (TextView) findViewById(R.id.strengthValue);
         strengthVal.setOnDragListener(new MyDragStrengthListener());
@@ -97,15 +124,89 @@ public class chooseStats extends Activity {
         // Another interface callback
     }*/
     }
-    private final class MyTouchListener implements View.OnTouchListener {
+    private final class My15TouchListener implements View.OnTouchListener {
         public boolean onTouch(View view, MotionEvent motionEvent) {
             if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                 ClipData data = ClipData.newPlainText("", "");
                 View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
                 view.startDrag(data, shadowBuilder, view, 0);
                 view.setVisibility(View.VISIBLE);
-                //currentx = view.getX();
-                //currenty = view.getY();
+                selected = 15;
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };
+
+    private final class My14TouchListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                view.startDrag(data, shadowBuilder, view, 0);
+                view.setVisibility(View.VISIBLE);
+                selected = 14;
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };
+
+    private final class My13TouchListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                view.startDrag(data, shadowBuilder, view, 0);
+                view.setVisibility(View.VISIBLE);
+                selected = 13;
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };
+
+    private final class My12TouchListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                view.startDrag(data, shadowBuilder, view, 0);
+                view.setVisibility(View.VISIBLE);
+                selected = 12;
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };
+
+    private final class My10TouchListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                view.startDrag(data, shadowBuilder, view, 0);
+                view.setVisibility(View.VISIBLE);
+                selected = 10;
+                return true;
+            } else {
+                return false;
+            }
+        }
+    };
+
+    private final class My8TouchListener implements View.OnTouchListener {
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                view.startDrag(data, shadowBuilder, view, 0);
+                view.setVisibility(View.VISIBLE);
+                selected = 8;
                 return true;
             } else {
                 return false;
@@ -145,7 +246,7 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DROP:
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
-                    strengthVal.setText(R.string.two);
+                    strengthVal.setText(selected + "");
                 case DragEvent.ACTION_DRAG_ENDED:
                     return true;
                 default:
@@ -169,7 +270,7 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DROP:
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
-                    conVal.setText(R.string.two);
+                    conVal.setText(selected + "");
                 case DragEvent.ACTION_DRAG_ENDED:
                     break;
                 default:
@@ -193,7 +294,7 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DROP:
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
-                    dexVal.setText(R.string.two);
+                    dexVal.setText(selected + "");
                 case DragEvent.ACTION_DRAG_ENDED:
                     break;
                 default:
@@ -217,7 +318,7 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DROP:
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
-                    intVal.setText(R.string.two);
+                    intVal.setText(selected + "");
                 case DragEvent.ACTION_DRAG_ENDED:
                     break;
                 default:
@@ -241,7 +342,7 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DROP:
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
-                    charismaVal.setText(R.string.two);
+                    charismaVal.setText(selected + "");
                 case DragEvent.ACTION_DRAG_ENDED:
                     break;
                 default:
@@ -265,7 +366,7 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DROP:
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
-                    wisdomVal.setText(R.string.two);
+                    wisdomVal.setText(selected + "");
                 case DragEvent.ACTION_DRAG_ENDED:
                     break;
                 default:
@@ -277,7 +378,15 @@ public class chooseStats extends Activity {
 
     private class proceedButtonListener implements View.OnClickListener {
         public void onClick(View v) {
+            selectedStats[0] = strengthVal.getText() + "";
+            selectedStats[1] = conVal.getText() + "";
+            selectedStats[2] = dexVal.getText() + "";
+            selectedStats[3] = intVal.getText() + "";
+            selectedStats[4] = charismaVal.getText() + "";
+            selectedStats[5] = wisdomVal.getText() + "";
             Intent intent = new Intent(context, finalizeCharacter.class);
+            intent.putExtra("myCharacter", myCharacter);
+            intent.putExtra("selectedStats", selectedStats);
             startActivity(intent);
         }
     };
