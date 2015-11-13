@@ -21,6 +21,10 @@ public class chooseBackground extends Activity {
 
     final Context context = this;
 
+    String[] myCharacter = new String[3];
+
+    String selectedBackground;
+
     TextView chooseBackgroundText;
 
     HorizontalScrollView hsr;
@@ -31,18 +35,18 @@ public class chooseBackground extends Activity {
 
     Button proceed;
 
-    String[] myCharacter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_background);
 
-        Intent intent = getIntent();
-        myCharacter = intent.getStringArrayExtra("myCharacter");
-
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
+
+        Intent preIntent = getIntent();
+        Bundle bundle = preIntent.getExtras();
+
+        myCharacter = (String[]) bundle.get("myCharacter");
 
         backgroundDescription = (TextView) findViewById(R.id.backgroundDescription);
         backgroundDescription.setMovementMethod(new ScrollingMovementMethod());
@@ -68,7 +72,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.acolyte_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Acolyte";
+                selectedBackground = "Acolyte";
             }
         });
 
@@ -81,7 +85,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.charlatan_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Charlatan";
+                selectedBackground = "Charlatan";
             }
         });
 
@@ -94,7 +98,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.criminal_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Criminal";
+                selectedBackground = "Criminal";
             }
         });
 
@@ -107,7 +111,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.entertainer_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Entertainer";
+                selectedBackground = "Entertainer";
             }
         });
 
@@ -120,7 +124,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.folk_hero_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Folk Hero";
+                selectedBackground = "Folk Hero";
             }
         });
 
@@ -133,7 +137,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.guild_artisan_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Guild Artisan";
+                selectedBackground = "Guild Artisan";
             }
         });
 
@@ -146,7 +150,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.hermit_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Hermit";
+                selectedBackground = "Hermit";
             }
         });
 
@@ -159,7 +163,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.noble_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Noble";
+                selectedBackground = "Noble";
             }
         });
 
@@ -172,7 +176,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.outlander_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Outlander";
+                selectedBackground = "Outlander";
             }
         });
 
@@ -185,7 +189,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.sage_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Sage";
+                selectedBackground = "Sage";
             }
         });
 
@@ -198,7 +202,8 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.sailor_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Sailor";
+                selectedBackground = "Sailor";
+                //Race race = new Dwarf(new Stat(1,2,3,4,5,6));
             }
         });
 
@@ -211,7 +216,7 @@ public class chooseBackground extends Activity {
                 hsr.smoothScrollTo(scrollX, 0);
                 backgroundDescription.setText(R.string.urchin_description);
                 proceed.setEnabled(true);
-                myCharacter[2] = "Urchin";
+                selectedBackground = "Urchin";
             }
         });
 
@@ -231,6 +236,7 @@ public class chooseBackground extends Activity {
 
     private class proceedButtonListener implements View.OnClickListener {
       public void onClick(View v) {
+          myCharacter[2] = selectedBackground;
           Intent intent = new Intent(context, chooseStats.class);
           intent.putExtra("myCharacter", myCharacter);
           startActivity(intent);

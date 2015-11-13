@@ -87,7 +87,8 @@
     <string name="strength">Strength</string>
 
     <string name="class_description">Description of Class</string>
-    <string name="myClass">class</string>
+    <string name="myClass">Class:</string>
+    <string name="race">Race:</string>
 
     <!-- Backgrounds -->
     <string name="acolyte">Acolyte</string>
@@ -116,4 +117,7 @@
     <string name="sage_description">Sage description</string>
     <string name="sailor_description">Sailor description</string>
     <string name="urchin_description">Urchin description</string>
+    <string name="zero">0</string>
+    <string name="background">Background:</string>
+
 </resources>

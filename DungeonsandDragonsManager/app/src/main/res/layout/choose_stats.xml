@@ -36,7 +36,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/one"
+        android:text="@string/zero"
         android:id="@+id/strengthValue"
         android:textSize="50px"
         android:layout_below="@+id/strength"
@@ -56,7 +56,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/one"
+        android:text="@string/zero"
         android:id="@+id/conValue"
         android:textSize="50px"
         android:layout_below="@+id/constitution"
@@ -76,7 +76,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/one"
+        android:text="@string/zero"
         android:id="@+id/dexValue"
         android:textSize="50px"
         android:layout_below="@+id/dexterity"
@@ -98,7 +98,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/one"
+        android:text="@string/zero"
         android:id="@+id/intValue"
         android:textSize="50px"
         android:layout_below="@+id/intelligence"
@@ -118,7 +118,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/one"
+        android:text="@string/zero"
         android:id="@+id/charismaValue"
         android:textSize="50px"
         android:layout_below="@+id/charisma"
@@ -138,7 +138,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/one"
+        android:text="@string/zero"
         android:id="@+id/wisdomValue"
         android:textSize="50px"
         android:layout_below="@+id/wisdom"
@@ -176,4 +176,34 @@
         android:layout_below="@+id/dexterity"
         android:layout_alignLeft="@+id/point2"
         android:layout_alignStart="@+id/point2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/one"
+        android:id="@+id/point4"
+        android:textSize="50px"
+        android:layout_alignTop="@+id/intValue"
+        android:layout_alignLeft="@+id/point3"
+        android:layout_alignStart="@+id/point3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/one"
+        android:id="@+id/point5"
+        android:textSize="50px"
+        android:layout_below="@+id/charisma"
+        android:layout_alignLeft="@+id/point4"
+        android:layout_alignStart="@+id/point4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/one"
+        android:id="@+id/point6"
+        android:textSize="50px"
+        android:layout_below="@+id/wisdom"
+        android:layout_alignLeft="@+id/point5"
+        android:layout_alignStart="@+id/point5" />
 </RelativeLayout>
