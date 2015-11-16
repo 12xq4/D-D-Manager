@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/background_menu"
+        android:id="@+id/chooseBackgroundText"
+        android:layout_gravity="center_horizontal"
+        android:textSize="100px"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="79dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:layout_width="450px"
+        android:layout_height="650px"
+        android:id="@+id/backgroundImage"
+        android:layout_alignTop="@+id/backgroundDescription"
+        android:layout_marginLeft="100px"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="450px"
+        android:layout_height="650px"
+        android:text="@string/background_description"
+        android:id="@+id/backgroundDescription"
+        android:textSize="50px"
+        android:scrollbars = "vertical"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/chooseBackgroundText"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:background="@drawable/border"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/proceed"
+        android:id="@+id/backgroundProceed"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="195dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

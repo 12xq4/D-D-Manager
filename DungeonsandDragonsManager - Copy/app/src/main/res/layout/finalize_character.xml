@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_character"
+        android:id="@+id/yourCharacter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="100px" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="350px"
+        android:text="@string/attributes"
+        android:id="@+id/attributes"
+        android:layout_below="@+id/yourCharacter"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="50px"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:text="@string/skills"
+        android:id="@+id/skills"
+        android:layout_below="@+id/attributes"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="50px"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:layout_width="600px"
+        android:layout_height="300px"
+        android:text="@string/race"
+        android:id="@+id/myRace"
+        android:textSize="50px"
+        android:layout_below="@+id/skills"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/border" />
+
+    <ImageView
+        android:layout_width="600px"
+        android:layout_height="300px"
+        android:id="@+id/raceImage"
+        android:layout_above="@+id/myClass"
+        android:layout_toRightOf="@+id/myRace"
+        android:layout_toEndOf="@+id/myRace"
+        android:background="@drawable/border"
+        android:paddingTop="10px"
+        android:paddingBottom="10px" />
+
+    <TextView
+        android:layout_width="600px"
+        android:layout_height="300px"
+        android:text="@string/myClass"
+        android:id="@+id/myClass"
+        android:textSize="50px"
+        android:layout_below="@+id/myRace"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/border"/>
+
+    <ImageView
+        android:layout_width="600px"
+        android:layout_height="300px"
+        android:id="@+id/classImage"
+        android:layout_above="@+id/myBackground"
+        android:layout_toRightOf="@+id/myClass"
+        android:layout_toEndOf="@+id/myClass"
+        android:background="@drawable/border"
+        android:paddingTop="10px"
+        android:paddingBottom="10px"/>
+
+    <TextView
+        android:layout_width="600px"
+        android:layout_height="300px"
+        android:text="@string/background"
+        android:id="@+id/myBackground"
+        android:textSize="50px"
+        android:layout_below="@+id/myClass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/border"/>
+
+    <ImageView
+        android:layout_width="600px"
+        android:layout_height="300px"
+        android:id="@+id/backImage"
+        android:layout_alignBottom="@+id/myBackground"
+        android:layout_toRightOf="@+id/myBackground"
+        android:layout_toEndOf="@+id/myBackground"
+        android:background="@drawable/border"
+        android:paddingTop="10px"
+        android:paddingBottom="10px"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_play"
+        android:id="@+id/goPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/progressBar" /> -->
+
+</RelativeLayout>
