@@ -3,15 +3,17 @@ package com.example.dylan.dungeonsanddragonsmanager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.view.View;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Background;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Race;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Role;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Skills;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Stat;
 
 import java.util.ArrayList;
 
@@ -130,7 +132,7 @@ public class finalizeCharacter extends Activity {
         //if (chosenBackground.equals("Acolyte"))
         //    playerBackground = new Acolyte();
 
-        play = (Button) findViewById(R.id.goPlay);
+        //play = (Button) findViewById(R.id.goPlay);
         //play.setOnClickListener(new proceedButtonListener());
 
         progress = (ProgressBar) findViewById(R.id.progressBar);
