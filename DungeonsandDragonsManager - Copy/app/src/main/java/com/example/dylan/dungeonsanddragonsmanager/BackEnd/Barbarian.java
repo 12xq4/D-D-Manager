@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager;
+package com.example.dylan.dungeonsanddragonsmanager.BackEnd;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,12 +11,22 @@ package com.example.dylan.dungeonsanddragonsmanager;
  */
 public class Barbarian extends Role{
     // int modifier;
-    public Barbarian(Stat stat) {
-       this.stat = stat;
-       hitPoint = 12;
-       hitDice = "one 12-sided dice";
-       setEquipments();
-       setSkills();
+    public Barbarian(Stat stat){
+        name = "Barbarian";
+        this.stat = stat;
+        hitPoint = 12 + stat.returnModifier(stat.getConstitution());
+        hitDice = "one 12-sided dice";
+        setEquipments();
+        setSkills();
+    }
+
+    @Override
+    String displaySkills() {
+        String result = "Skills: \n";
+        for (Skills skill: skillset){
+            result += skill + "\n";
+        }
+        return result;
     }
 
     @Override
@@ -31,7 +41,16 @@ public class Barbarian extends Role{
         skillset.add(new Skills("Armor and Weapon Proficiencies","Light and medium armor, shields, simple and martial weapons"));
         skillset.add(new Skills("Bonus", " Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival"));
     }
-    
+
+    @Override
+    String displayEquipments() {
+        String result = "Equipments: ";
+        for (String equi: equipment){
+            result += "            " +equi + "\n";
+        }
+        return result;
+    }
+
     void setEquipments(){
         equipment.add("any martial weapon");
         equipment.add("any simple weapon");

@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager;
+package com.example.dylan.dungeonsanddragonsmanager.BackEnd;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,9 +10,12 @@ package com.example.dylan.dungeonsanddragonsmanager;
  * @author jackqiao
  */
 import java.util.ArrayList;
+import java.util.Iterator;
+
 public class Dwarf extends Race{
     
     public Dwarf (Stat stat) {
+        name = "Dwarf";
         this.stat = stat;
         speed = 25;
         stat.addCons(2);
@@ -24,7 +27,16 @@ public class Dwarf extends Race{
         language.add("Common");
         language.add("Dwarvish");
     }
-    
+
+    @Override
+    String displayLanguage() {
+        String result = "Language:   ";
+        for (String lan:language) {
+             result += lan + "    ";
+        }
+        return result;
+    }
+
     ArrayList<String> getLanguage() {
         return language;
     }
@@ -37,8 +49,18 @@ public class Dwarf extends Race{
         skillset.add(new Skills("Tool Proficiencies", "One of your choice: Smith's tools, brewer's supplies, or mason's tools."));
         skillset.add(new Skills("Stonecunning","Whenever you make a History check related to the origin of stonework, add double proficiency to the roll"));
     }
-    
+
+    @Override
+    String displaySkills() {
+        String result = "Skills: \n";
+        for (Skills skill: skillset){
+            result += skill + "\n";
+        }
+        return result;
+    }
+
     ArrayList<Skills> getSkillSet() {
         return skillset;
     }
+
 }
