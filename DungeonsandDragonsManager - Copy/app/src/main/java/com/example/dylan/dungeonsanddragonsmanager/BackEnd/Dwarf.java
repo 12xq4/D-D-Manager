@@ -18,7 +18,7 @@ public class Dwarf extends Race{
         name = "Dwarf";
         this.stat = stat;
         speed = 25;
-        stat.addCons(2);
+        this.stat.addCons(2);
         setLanguage();
         setSkills();
     }
