@@ -10,7 +10,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Background;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Dwarf;
 import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Race;
 import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Role;
 import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Skills;
@@ -62,20 +61,20 @@ public class finalizeCharacter extends Activity {
         myCharacter = (String[]) bundle.get("myCharacter");
         chosenStats = (String[]) bundle.get("selectedStats");
 
-        playerStat = new Stat(Integer.parseInt(chosenStats[0]), Integer.parseInt(chosenStats[1]), Integer.parseInt(chosenStats[2]),
-                Integer.parseInt(chosenStats[3]), Integer.parseInt(chosenStats[4]), Integer.parseInt(chosenStats[5]));
-        //playerRace = new Dwarf(playerStat);
-
         yourCharacter = (TextView) findViewById(R.id.yourCharacter);
 
         attributes = (TextView) findViewById(R.id.attributes);
-        attString = playerStat.toString();
+        attString = "Attributes: \n" +
+                 "\n              Strength: " + chosenStats[0] +
+                 "                          Constitution: " + chosenStats[1]
+                 + "\n             Dexterity: " + chosenStats[2] +
+                 "                            Intelligence: " + chosenStats[3]
+                + "\n            Charisma: " + chosenStats[4] +
+                 "                                 Wisdom: " + chosenStats[5];
         attributes.setText(attString);
 
-        /*chosenRace = (TextView) findViewById(R.id.myRace);
-
-        chosenRace.setText( playerRace.toString());
-        //chosenRace.setText("Race: " + myCharacter[0]);
+        chosenRace = (TextView) findViewById(R.id.myRace);
+        chosenRace.setText("Race: " + myCharacter[0]);
 
         chosenClass = (TextView) findViewById(R.id.myClass);
         chosenClass.setText("Class: " + myCharacter[1]);
@@ -83,18 +82,18 @@ public class finalizeCharacter extends Activity {
         chosenBackground = (TextView) findViewById(R.id.myBackground);
         chosenBackground.setText("Background: " + myCharacter[2]);
 
-        //raceImage = (ImageView) findViewById(R.id.raceImage);
-        //raceImage.setImageResource(R.drawable.dwarf);
+        raceImage = (ImageView) findViewById(R.id.raceImage);
+        raceImage.setImageResource(R.drawable.dwarf);
         /*else if (raceName.equals("elf") )
             raceImage.setImageResource(R.drawable.elf);
         if ( raceName.equals("halfling") )
             raceImage.setImageResource(R.drawable.halfling);
         else if (raceName.equals("human") )
             raceImage.setImageResource(R.drawable.human); */
-        //classImage = (ImageView) findViewById(R.id.classImage);
-        //classImage.setImageResource(R.drawable.barbarian);
-        //backImage = (ImageView) findViewById(R.id.backImage);
-        //backImage.setImageResource(R.drawable.acolyte);*/
+        classImage = (ImageView) findViewById(R.id.classImage);
+        classImage.setImageResource(R.drawable.barbarian);
+        backImage = (ImageView) findViewById(R.id.backImage);
+        backImage.setImageResource(R.drawable.acolyte);
 
         /*stat1 = (TextView) findViewById(R.id.stat1);
         stat1.setText(chosenStats[0]);
@@ -114,7 +113,8 @@ public class finalizeCharacter extends Activity {
         stat6 = (TextView) findViewById(R.id.stat6);
         stat6.setText(chosenStats[5]);*/
 
-
+        playerStat = new Stat(Integer.parseInt(chosenStats[0]), Integer.parseInt(chosenStats[1]), Integer.parseInt(chosenStats[2]),
+                Integer.parseInt(chosenStats[3]), Integer.parseInt(chosenStats[4]), Integer.parseInt(chosenStats[5]));
 
         /*if (myCharacter[0].equals("Dwarf")) {
             playerRace = new Dwarf(playerStat);
