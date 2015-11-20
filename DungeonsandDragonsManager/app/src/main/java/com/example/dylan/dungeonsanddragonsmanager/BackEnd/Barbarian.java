@@ -5,6 +5,8 @@ package com.example.dylan.dungeonsanddragonsmanager.BackEnd;
  * and open the template in the editor.
  */
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jackqiao
@@ -16,6 +18,8 @@ public class Barbarian extends Role{
         this.stat = stat;
         hitPoint = 12 + stat.returnModifier(stat.getConstitution());
         hitDice = "one 12-sided dice";
+        skillset = new ArrayList<>();
+        equipment = new ArrayList<>();
         setEquipments();
         setSkills();
     }

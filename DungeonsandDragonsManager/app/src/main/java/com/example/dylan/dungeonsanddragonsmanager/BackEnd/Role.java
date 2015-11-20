@@ -29,7 +29,7 @@ public abstract class Role {
     abstract void setEquipments();
 
     public String toString(){
-        return name + "\n" + "Hitpoints:    " + hitPoint + "    Attack:    " + hitDice
+        return "Hitpoints:    " + hitPoint + "\nAttack:    " + hitDice + "\n"
                 + displaySkills() + displayEquipments();
     }
 }

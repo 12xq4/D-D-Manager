@@ -10,7 +10,9 @@ import android.view.View;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -25,6 +27,8 @@ public class chooseBackground extends Activity {
 
     String selectedBackground;
 
+    ImageView backgroundImage;
+
     TextView chooseBackgroundText;
 
     HorizontalScrollView hsr;
@@ -34,6 +38,8 @@ public class chooseBackground extends Activity {
     TextView backgroundDescription;
 
     Button proceed;
+
+    ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +54,8 @@ public class chooseBackground extends Activity {
 
         myCharacter = (String[]) bundle.get("myCharacter");
 
+        backgroundImage = (ImageView) findViewById(R.id.backgroundImage);
+
         backgroundDescription = (TextView) findViewById(R.id.backgroundDescription);
         backgroundDescription.setMovementMethod(new ScrollingMovementMethod());
 
@@ -59,6 +67,10 @@ public class chooseBackground extends Activity {
 
         proceed = (Button) findViewById(R.id.backgroundProceed);
         proceed.setOnClickListener(new proceedButtonListener());
+        proceed.setEnabled(false);
+
+        progress = (ProgressBar) findViewById(R.id.progressBar);
+        progress.setProgress(60);
 
         display.getSize(size);
         final int width = size.x;
@@ -70,6 +82,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (acolyteButton.getLeft() - (width / 2)) + (acolyteButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.acolyte);
                 backgroundDescription.setText(R.string.acolyte_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Acolyte";
@@ -83,6 +96,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (charlatanButton.getLeft() - (width / 2)) + (charlatanButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.charlatan);
                 backgroundDescription.setText(R.string.charlatan_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Charlatan";
@@ -96,6 +110,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (criminalButton.getLeft() - (width / 2)) + (criminalButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.criminal);
                 backgroundDescription.setText(R.string.criminal_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Criminal";
@@ -109,6 +124,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (entertainerButton.getLeft() - (width / 2)) + (entertainerButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.entertainer);
                 backgroundDescription.setText(R.string.entertainer_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Entertainer";
@@ -122,6 +138,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (folk_heroButton.getLeft() - (width / 2)) + (folk_heroButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.folk_hero);
                 backgroundDescription.setText(R.string.folk_hero_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Folk Hero";
@@ -135,6 +152,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (guild_artisanButton.getLeft() - (width / 2)) + (guild_artisanButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.guild_artisan);
                 backgroundDescription.setText(R.string.guild_artisan_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Guild Artisan";
@@ -148,6 +166,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (hermitButton.getLeft() - (width / 2)) + (hermitButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.hermit);
                 backgroundDescription.setText(R.string.hermit_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Hermit";
@@ -161,6 +180,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (nobleButton.getLeft() - (width / 2)) + (nobleButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.noble);
                 backgroundDescription.setText(R.string.noble_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Noble";
@@ -174,6 +194,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (outlanderButton.getLeft() - (width / 2)) + (outlanderButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.outlander);
                 backgroundDescription.setText(R.string.outlander_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Outlander";
@@ -187,6 +208,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (sageButton.getLeft() - (width / 2)) + (sageButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.sage);
                 backgroundDescription.setText(R.string.sage_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Sage";
@@ -200,10 +222,25 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (sailorButton.getLeft() - (width / 2)) + (sailorButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.sailor);
                 backgroundDescription.setText(R.string.sailor_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Sailor";
                 //Race race = new Dwarf(new Stat(1,2,3,4,5,6));
+            }
+        });
+
+        final Button soldierButton = new Button(this);
+        soldierButton.setText(R.string.soldier);
+        soldierButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int scrollX = (soldierButton.getLeft() - (width / 2)) + (soldierButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.soldier);
+                backgroundDescription.setText(R.string.soldier_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Soldier";
             }
         });
 
@@ -214,6 +251,7 @@ public class chooseBackground extends Activity {
             public void onClick(View v) {
                 int scrollX = (urchinButton.getLeft() - (width / 2)) + (urchinButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                backgroundImage.setImageResource(R.drawable.urchin);
                 backgroundDescription.setText(R.string.urchin_description);
                 proceed.setEnabled(true);
                 selectedBackground = "Urchin";
@@ -231,6 +269,7 @@ public class chooseBackground extends Activity {
         linearLayout.addView(outlanderButton);
         linearLayout.addView(sageButton);
         linearLayout.addView(sailorButton);
+        linearLayout.addView(soldierButton);
         linearLayout.addView(urchinButton);
     }
 

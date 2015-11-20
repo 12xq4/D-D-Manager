@@ -34,8 +34,8 @@
         android:layout_alignStart="@+id/constitution" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/zero"
         android:id="@+id/strengthValue"
         android:textSize="50px"
@@ -54,8 +54,8 @@
         android:layout_alignStart="@+id/intelligence" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/zero"
         android:id="@+id/conValue"
         android:textSize="50px"
@@ -74,8 +74,8 @@
         android:layout_alignStart="@+id/constitution" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/zero"
         android:id="@+id/dexValue"
         android:textSize="50px"
@@ -96,8 +96,8 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/zero"
         android:id="@+id/intValue"
         android:textSize="50px"
@@ -116,8 +116,8 @@
         android:layout_alignStart="@+id/intValue" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/zero"
         android:id="@+id/charismaValue"
         android:textSize="50px"
@@ -136,8 +136,8 @@
         android:layout_alignEnd="@+id/strength" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/zero"
         android:id="@+id/wisdomValue"
         android:textSize="50px"
@@ -146,8 +146,8 @@
         android:layout_alignStart="@+id/wisdom" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/one"
         android:id="@+id/point1"
         android:textSize="50px"
@@ -158,8 +158,8 @@
         android:layout_marginStart="100dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/one"
         android:id="@+id/point2"
         android:textSize="50px"
@@ -168,8 +168,8 @@
         android:layout_alignStart="@+id/point1" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/one"
         android:id="@+id/point3"
         android:textSize="50px"
@@ -178,8 +178,8 @@
         android:layout_alignStart="@+id/point2" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/one"
         android:id="@+id/point4"
         android:textSize="50px"
@@ -188,8 +188,8 @@
         android:layout_alignStart="@+id/point3" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/one"
         android:id="@+id/point5"
         android:textSize="50px"
@@ -198,12 +198,20 @@
         android:layout_alignStart="@+id/point4" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60px"
+        android:layout_height="70px"
         android:text="@string/one"
         android:id="@+id/point6"
         android:textSize="50px"
         android:layout_below="@+id/wisdom"
         android:layout_alignLeft="@+id/point5"
         android:layout_alignStart="@+id/point5" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

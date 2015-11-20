@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="new_player">New Player</string>
     <string name="existing_player">Existing Player</string>
-    <string name="dd_Manager"><![CDATA[D&D Manager]]></string>
+    <string name="dd_Manager">D&amp;D\nManager</string>
     <string name="start">Start</string>
     <string name="proceed">Proceed</string>
     <string name="class_menu">Class Menu</string>
@@ -102,6 +102,7 @@
     <string name="outlander">Outlander</string>
     <string name="sage">Sage</string>
     <string name="sailor">Sailor</string>
+    <string name="soldier">Soldier</string>
     <string name="urchin">Urchin</string>
 
     <!-- Background Descriptions -->
@@ -116,8 +117,17 @@
     <string name="outlander_description">Outlander description</string>
     <string name="sage_description">Sage description</string>
     <string name="sailor_description">Sailor description</string>
+    <string name="soldier_description">Soldier description</string>
     <string name="urchin_description">Urchin description</string>
+
     <string name="zero">0</string>
     <string name="background">Background:</string>
+    <string name="background_description">Background description</string>
+    <string name="d">D</string>
+    <string name="ampersand"><![CDATA[&]]></string>
+    <string name="manager">Manager</string>
+    <string name="dnd"><![CDATA[D&D]]></string>
+    <string name="attributes">Attributes</string>
+    <string name="skills">Skills:</string>
 
 </resources>

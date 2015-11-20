@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -41,11 +42,9 @@ public class chooseStats extends Activity {
 
     String[] selectedStats = new String[6];
 
-    //float currentx, currenty;
-
-    //ImageView number1, number2;
-
     Button proceed;
+
+    ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +60,9 @@ public class chooseStats extends Activity {
 
         proceed = (Button) findViewById(R.id.statsProceedButton);
         proceed.setOnClickListener(new proceedButtonListener());
+
+        progress = (ProgressBar) findViewById(R.id.progressBar);
+        progress.setProgress(80);
 
         // Points: 15, 14, 13, 12, 10, 8
         point1 = (TextView) findViewById(R.id.point1);
@@ -106,23 +108,6 @@ public class chooseStats extends Activity {
         wisdomVal = (TextView) findViewById(R.id.wisdomValue);
         wisdomVal.setOnDragListener(new MyDragWisdomListener());
 
-        /*number1 = (ImageView) findViewById(R.id.number1);
-        number1.setImageResource(R.drawable.number1);
-        number1.setOnTouchListener(new MyTouchListener());
-
-        number2 = (ImageView) findViewById(R.id.number2);
-        number2.setImageResource(R.drawable.number1);
-        number2.setOnDragListener(new MyDragListener());*/
-
-    /*public void onItemSelected(AdapterView<?> parent, View view,
-                               int pos, long id) {
-        // An item was selected. You can retrieve the selected item using
-        // parent.getItemAtPosition(pos)
-    }
-
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Another interface callback
-    }*/
     }
     private final class My15TouchListener implements View.OnTouchListener {
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -382,8 +367,8 @@ public class chooseStats extends Activity {
             selectedStats[2] = conVal.getText() + "";
             selectedStats[1] = dexVal.getText() + "";
             selectedStats[3] = intVal.getText() + "";
-            selectedStats[5] = charismaVal.getText() + "";
-            selectedStats[4] = wisdomVal.getText() + "";
+            selectedStats[4] = charismaVal.getText() + "";
+            selectedStats[5] = wisdomVal.getText() + "";
             Intent intent = new Intent(context, finalizeCharacter.class);
             intent.putExtra("myCharacter", myCharacter);
             intent.putExtra("selectedStats", selectedStats);

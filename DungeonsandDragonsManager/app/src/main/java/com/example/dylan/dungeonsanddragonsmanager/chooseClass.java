@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Display;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.View;
 
@@ -38,6 +40,8 @@ public class chooseClass extends Activity {
 
     Button proceed;
 
+    ProgressBar progress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +55,8 @@ public class chooseClass extends Activity {
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
 
+        classImage = (ImageView) findViewById(R.id.classImage);
+
         classDescription = (TextView) findViewById(R.id.classDescription);
         classDescription.setMovementMethod(new ScrollingMovementMethod());
 
@@ -63,6 +69,9 @@ public class chooseClass extends Activity {
         proceed = (Button) findViewById(R.id.classProceed);
         proceed.setOnClickListener(new proceedButtonListener());
 
+        progress = (ProgressBar) findViewById(R.id.progressBar);
+        progress.setProgress(40);
+
         display.getSize(size);
         final int width = size.x;
 
@@ -74,7 +83,7 @@ public class chooseClass extends Activity {
                 int scrollX = (barbarianButton.getLeft() - (width / 2)) + (barbarianButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classDescription.setText(R.string.barbarian_description);
-                //classImage.setImageResource(R.drawable.barbarian);
+                classImage.setImageResource(R.drawable.barbarian);
                 proceed.setEnabled(true);
                 selectedClass = "Barbarian";
             }
@@ -87,6 +96,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (bardButton.getLeft() - (width / 2)) + (bardButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.bard);
                 classDescription.setText(R.string.bard_description);
                 proceed.setEnabled(true);
                 selectedClass = "Bard";
@@ -100,6 +110,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (clericButton.getLeft() - (width / 2)) + (clericButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.cleric);
                 classDescription.setText(R.string.cleric_description);
                 proceed.setEnabled(true);
                 selectedClass = "Cleric";
@@ -113,6 +124,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (druidButton.getLeft() - (width / 2)) + (druidButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.druid);
                 classDescription.setText(R.string.druid_description);
                 proceed.setEnabled(true);
                 selectedClass = "Druid";
@@ -126,6 +138,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (fighterButton.getLeft() - (width / 2)) + (fighterButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.fighter);
                 classDescription.setText(R.string.fighter_description);
                 proceed.setEnabled(true);
                 selectedClass = "Fighter";
@@ -139,6 +152,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (monkButton.getLeft() - (width / 2)) + (monkButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.monk);
                 classDescription.setText(R.string.monk_description);
                 proceed.setEnabled(true);
                 selectedClass = "Monk";
@@ -152,6 +166,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (paladinButton.getLeft() - (width / 2)) + (paladinButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.paladin);
                 classDescription.setText(R.string.paladin_description);
                 proceed.setEnabled(true);
                 selectedClass = "Paladin";
@@ -165,6 +180,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (rangerButton.getLeft() - (width / 2)) + (rangerButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.ranger);
                 classDescription.setText(R.string.ranger_description);
                 proceed.setEnabled(true);
                 selectedClass = "Ranger";
@@ -179,6 +195,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (rogueButton.getLeft() - (width / 2)) + (rogueButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.rogue);
                 classDescription.setText(R.string.rogue_description);
                 proceed.setEnabled(true);
                 selectedClass = "Rogue";
@@ -192,6 +209,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (sorcererButton.getLeft() - (width / 2)) + (sorcererButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.sorcerer);
                 classDescription.setText(R.string.sorcerer_description);
                 proceed.setEnabled(true);
                 selectedClass = "Sorcerer";
@@ -205,6 +223,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (warlockButton.getLeft() - (width / 2)) + (warlockButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.warlock);
                 classDescription.setText(R.string.warlock_description);
                 proceed.setEnabled(true);
                 selectedClass = "Warlock";
@@ -218,6 +237,7 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (wizardButton.getLeft() - (width / 2)) + (wizardButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classImage.setImageResource(R.drawable.wizard);
                 classDescription.setText(R.string.wizard_description);
                 proceed.setEnabled(true);
                 selectedClass = "Wizard";

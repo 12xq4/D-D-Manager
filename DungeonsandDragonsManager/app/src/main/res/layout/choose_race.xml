@@ -3,19 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/race_menu"
-        android:id="@+id/chooseRaceText"
-        android:layout_gravity="center_horizontal"
-        android:textSize="100px"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="79dp" />
-
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
@@ -75,26 +62,41 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="500px"
-        android:id="@+id/raceImage"
-        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:text="@string/race_menu"
+        android:id="@+id/chooseRaceText"
+        android:layout_gravity="center_horizontal"
+        android:textSize="100px"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/raceProceed"
-        android:layout_toLeftOf="@+id/raceProceed" />
+        android:layout_marginTop="79dp" />
+
+    <ImageView
+        android:layout_width="450px"
+        android:layout_height="650px"
+        android:id="@+id/raceImage"
+        android:layout_alignTop="@+id/raceDescription"
+        android:layout_marginLeft="100px"
+        android:layout_alignParentLeft="true" />
 
     <TextView
-        android:layout_width="500px"
-        android:layout_height="500px"
+        android:layout_width="450px"
+        android:layout_height="650px"
         android:text="@string/raceDescription"
         android:id="@+id/raceDescription"
         android:textSize="50px"
         android:scrollbars = "vertical"
-        android:layout_alignTop="@+id/raceImage"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/chooseRaceText"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginRight="100px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:background="@drawable/border"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -106,5 +108,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="195dp"
         android:enabled="false" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

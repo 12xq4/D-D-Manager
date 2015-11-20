@@ -5,6 +5,8 @@ package com.example.dylan.dungeonsanddragonsmanager.BackEnd;
  * and open the template in the editor.
  */
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jackqiao
@@ -13,6 +15,9 @@ public class Acolyte extends Background{
 
     public Acolyte(){
         name = "Acolyte";
+        skillset = new ArrayList<>();
+        language = new ArrayList<>();
+        equipment= new ArrayList<>();
         setLanguage();
         setEquipments();
         setSkills();
@@ -25,7 +30,7 @@ public class Acolyte extends Background{
 
     @Override
     String displaySkills() {
-        String result = "Skills: \n";
+        String result = "\nSkills: \n";
         for (Skills skill: skillset){
             result += skill + "\n";
         }

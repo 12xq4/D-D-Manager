@@ -45,7 +45,7 @@ public class Stat {
     }
     public int getConstitution(){return constitution;}
     public void addCons(int con){
-        constitution = con;
+        constitution += con;
     }
     public int getIntelligence(){return intelligence;}
     public void addIntel(int inte){

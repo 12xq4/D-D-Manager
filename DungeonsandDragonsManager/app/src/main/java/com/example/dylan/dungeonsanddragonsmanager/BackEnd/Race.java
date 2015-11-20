@@ -38,7 +38,7 @@ public abstract class Race {
     abstract void setSkills();
     abstract String displaySkills();
     public String toString() {
-        return name + "\n" + displayLanguage() + displaySkills();
+        return displayLanguage() + "\n" + displaySkills();
     }
     
 }

@@ -30,24 +30,27 @@
     </HorizontalScrollView>
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="500px"
+        android:layout_width="450px"
+        android:layout_height="650px"
         android:id="@+id/backgroundImage"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/raceProceed"
-        android:layout_toLeftOf="@+id/raceProceed" />
+        android:layout_alignTop="@+id/backgroundDescription"
+        android:layout_marginLeft="100px"
+        android:layout_alignParentLeft="true" />
 
     <TextView
-        android:layout_width="500px"
-        android:layout_height="500px"
-        android:text="New Text"
+        android:layout_width="450px"
+        android:layout_height="650px"
+        android:text="@string/background_description"
         android:id="@+id/backgroundDescription"
-        android:layout_alignTop="@+id/backgroundImage"
-        android:layout_toRightOf="@+id/backgroundProceed"
-        android:layout_toEndOf="@+id/backgroundProceed"
-        android:textSize="50px" />
+        android:textSize="50px"
+        android:scrollbars = "vertical"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/chooseBackgroundText"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:background="@drawable/border"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -58,5 +61,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="195dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

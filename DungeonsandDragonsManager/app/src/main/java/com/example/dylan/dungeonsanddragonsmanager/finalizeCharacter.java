@@ -3,13 +3,23 @@ package com.example.dylan.dungeonsanddragonsmanager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.view.View;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.Button;
-import android.widget.ScrollView;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Acolyte;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Background;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Barbarian;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Dwarf;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Race;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Role;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Skills;
+import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Stat;
+
+import java.util.ArrayList;
 
 
 /**
@@ -22,9 +32,19 @@ public class finalizeCharacter extends Activity {
     String[] myCharacter = new String[3];
     String[] chosenStats = new String[6];
 
+    String raceName, className, backName;
+    String attString;
+
     TextView yourCharacter;
+    TextView raceHeader, classHeader, backgroundHeader;
     TextView chosenClass, chosenRace, chosenBackground;
-    TextView stat1, stat2, stat3, stat4, stat5, stat6;
+    TextView attributes;
+
+    ImageView raceImage, classImage, backImage;
+
+    ArrayList<Skills> skillset;
+    ArrayList<String> language;
+    ArrayList<String> equipment;
 
     Stat playerStat;
     Race playerRace;
@@ -32,6 +52,8 @@ public class finalizeCharacter extends Activity {
     Background playerBackground;
 
     Button play;
+
+    ProgressBar progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,18 +66,66 @@ public class finalizeCharacter extends Activity {
         myCharacter = (String[]) bundle.get("myCharacter");
         chosenStats = (String[]) bundle.get("selectedStats");
 
-        chosenClass = (TextView) findViewById(R.id.chosenClass);
-        chosenClass.setText(myCharacter[1]);
-
-        chosenRace = (TextView) findViewById(R.id.chosenRace);
-        chosenRace.setText(myCharacter[0]);
-
-        chosenBackground = (TextView) findViewById(R.id.chosenBackground);
-        chosenBackground.setText(myCharacter[2]);
-
         yourCharacter = (TextView) findViewById(R.id.yourCharacter);
 
-        stat1 = (TextView) findViewById(R.id.stat1);
+        playerStat = new Stat(Integer.parseInt(chosenStats[0]), Integer.parseInt(chosenStats[1]), Integer.parseInt(chosenStats[2]),
+                Integer.parseInt(chosenStats[3]), Integer.parseInt(chosenStats[4]), Integer.parseInt(chosenStats[5]));
+
+        attributes = (TextView) findViewById(R.id.attributes);
+
+
+        raceHeader = (TextView) findViewById(R.id.raceHeader);
+        chosenRace = (TextView) findViewById(R.id.myRace);
+        chosenRace.setMovementMethod(new ScrollingMovementMethod());
+
+        classHeader = (TextView) findViewById(R.id.classHeader);
+        chosenClass = (TextView) findViewById(R.id.myClass);
+        chosenClass.setMovementMethod(new ScrollingMovementMethod());
+
+        backgroundHeader = (TextView) findViewById(R.id.backHeader);
+        chosenBackground = (TextView) findViewById(R.id.myBackground);
+        chosenBackground.setMovementMethod(new ScrollingMovementMethod());
+
+        if ( myCharacter[0].equals("Dwarf")) {
+            playerRace = new Dwarf(playerStat);
+            raceHeader.setText("Race: Dwarf");
+            chosenRace.setText(playerRace.toString());
+        }
+        if ( myCharacter[1].equals("Barbarian")) {
+            playerRole = new Barbarian(playerStat);
+            classHeader.setText("Class: Barbarian");
+            chosenClass.setText(playerRole.toString());
+        }
+        if ( myCharacter[2].equals("Acolyte")) {
+            playerBackground = new Acolyte();
+            backgroundHeader.setText("Background: Acolyte");
+            chosenBackground.setText(playerBackground.toString());
+        }
+
+        attString = playerStat.toString();
+        attributes.setText("Attributes: \n" + attString);
+        /*//chosenRace.setText("Race: " + myCharacter[0]);
+
+        chosenClass = (TextView) findViewById(R.id.myClass);
+        chosenClass.setText("Class: " + myCharacter[1]);
+
+        chosenBackground = (TextView) findViewById(R.id.myBackground);
+        chosenBackground.setText("Background: " + myCharacter[2]);
+
+        //raceImage = (ImageView) findViewById(R.id.raceImage);
+        //raceImage.setImageResource(R.drawable.dwarf);
+        /*else if (raceName.equals("elf") )
+            raceImage.setImageResource(R.drawable.elf);
+        if ( raceName.equals("halfling") )
+            raceImage.setImageResource(R.drawable.halfling);
+        else if (raceName.equals("human") )
+            raceImage.setImageResource(R.drawable.human); */
+        //classImage = (ImageView) findViewById(R.id.classImage);
+        //classImage.setImageResource(R.drawable.barbarian);
+        //backImage = (ImageView) findViewById(R.id.backImage);
+        //backImage.setImageResource(R.drawable.acolyte);*/
+
+        /*stat1 = (TextView) findViewById(R.id.stat1);
         stat1.setText(chosenStats[0]);
 
         stat2 = (TextView) findViewById(R.id.stat2);
@@ -71,24 +141,34 @@ public class finalizeCharacter extends Activity {
         stat5.setText(chosenStats[4]);
 
         stat6 = (TextView) findViewById(R.id.stat6);
-        stat6.setText(chosenStats[5]);
+        stat6.setText(chosenStats[5]);*/
 
-        playerStat = new Stat(Integer.parseInt(chosenStats[0]),Integer.parseInt(chosenStats[1]),Integer.parseInt(chosenStats[2]),
-                Integer.parseInt(chosenStats[3]),Integer.parseInt(chosenStats[4]),Integer.parseInt(chosenStats[5]));
 
-        if (chosenRace.equals("Dwarf"))
+
+        /*if (myCharacter[0].equals("Dwarf")) {
             playerRace = new Dwarf(playerStat);
+            //String stringSkills = "Race: " + myCharacter[0] + "\n";
 
-        if (chosenClass.equals("Barbarian"))
-            playerRole = new Barbarian(playerStat);
+            //skillset = playerRace.skillset;
+            //for (int x = 0; x < skillset.size(); x++) {
+            //    stringSkills = stringSkills + skillset.get(x) + "\n";
+            //}
+            chosenRace.setText("Race: " + myCharacter[0] + "\n");
+        }*/
+        //if (chosenClass.equals("Barbarian"))
+        //    playerRole = new Barbarian(playerStat);
 
-        if (chosenBackground.equals("Acolyte"))
-            playerBackground = new Acolyte();
+        //if (chosenBackground.equals("Acolyte"))
+        //    playerBackground = new Acolyte();
 
-        play = (Button) findViewById(R.id.goPlay);
+        //play = (Button) findViewById(R.id.goPlay);
         //play.setOnClickListener(new proceedButtonListener());
 
+        progress = (ProgressBar) findViewById(R.id.progressBar);
+        progress.setProgress(100);
 
+        //test = playerRace.language;
+        //String language1 = playerRace.language.get(0);
 
     }
 
