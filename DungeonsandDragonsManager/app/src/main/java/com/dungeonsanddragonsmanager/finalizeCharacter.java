@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager;
+package com.dungeonsanddragonsmanager;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,14 +10,14 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Acolyte;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Background;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Barbarian;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Dwarf;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Race;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Role;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Skills;
-import com.example.dylan.dungeonsanddragonsmanager.BackEnd.Stat;
+import com.dungeonsanddragonsmanager.BackEnd.Acolyte;
+import com.dungeonsanddragonsmanager.BackEnd.Background;
+import com.dungeonsanddragonsmanager.BackEnd.Barbarian;
+import com.dungeonsanddragonsmanager.BackEnd.Dwarf;
+import com.dungeonsanddragonsmanager.BackEnd.Race;
+import com.dungeonsanddragonsmanager.BackEnd.Role;
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+import com.dungeonsanddragonsmanager.BackEnd.Stat;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager.BackEnd;
+package com.dungeonsanddragonsmanager;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -35,27 +35,27 @@ public class Stat {
         addWis(wis);
         addChar(cha);
     }
-    public int getStrength(){return strength;}
+    
     public void addStr(int str){
         strength += str;
     }
-    public int getDexterity(){return dexterity;}
+    
     public void addDex(int dex){
         dexterity += dex;
     }
-    public int getConstitution(){return constitution;}
+     
     public void addCons(int con){
-        constitution += con;
+        constitution = con;
     }
-    public int getIntelligence(){return intelligence;}
+    
     public void addIntel(int inte){
         intelligence += inte;
     }
-    public int getWisdom(){return wisdom;}
+    
     public void addWis(int wis){
         wisdom += wis;
     }
-    public int getCharisma(){return charisma;}
+    
     public void addChar(int chari){
         charisma += chari;
     }
@@ -111,10 +111,5 @@ public class Stat {
             default:
                 return 0;
         }
-    }
-    public String toString() {
-        return "Strength:        " + strength + "    Dexterity:    " + dexterity + "\n" +
-                "Consitution:    " + constitution + "    Intelligence:    " + intelligence + "\n" +
-                "Wisdom:         " + wisdom + "    Charisma:    " + charisma + "\n";
     }
 }

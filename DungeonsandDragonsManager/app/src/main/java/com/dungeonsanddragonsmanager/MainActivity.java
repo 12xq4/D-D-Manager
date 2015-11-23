@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager;
+package com.dungeonsanddragonsmanager;
 
 import android.content.Context;
 import android.content.Intent;

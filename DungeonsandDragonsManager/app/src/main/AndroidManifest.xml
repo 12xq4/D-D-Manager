@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dylan.dungeonsanddragonsmanager" >
+    package="com.dungeonsanddragonsmanager" >
     <uses-sdk android:minSdkVersion="13" />
     <application
         android:allowBackup="true"

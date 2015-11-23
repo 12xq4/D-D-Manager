@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager;
+package com.dungeonsanddragonsmanager;
 
 /**
  * Created by Dylan on 2015-10-29.

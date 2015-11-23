@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager.BackEnd;
+package com.dungeonsanddragonsmanager;
 import java.util.ArrayList;
 
 /*
@@ -12,24 +12,17 @@ import java.util.ArrayList;
  * @author jackqiao
  */
 public abstract class Role {
-    String name;
     ArrayList<Skills> skillset;
     String hitDice;
     int hitPoint;
+    int modifier;
     ArrayList<String> equipment;
     Stat stat;
     public Role () {
         hitDice = "0";
         hitPoint = 0;
     }
-
-    abstract String displaySkills();
+    
     abstract void setSkills();
-    abstract String displayEquipments();
     abstract void setEquipments();
-
-    public String toString(){
-        return "Hitpoints:    " + hitPoint + "\nAttack:    " + hitDice + "\n"
-                + displaySkills() + displayEquipments();
-    }
 }
