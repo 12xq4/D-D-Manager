@@ -17,15 +17,6 @@ public class Stat {
     int intelligence;
     int wisdom;
     int charisma;
-    
-    public Stat() {
-        strength = 0;
-        dexterity = 0;
-        constitution = 0;
-        intelligence = 0;
-        wisdom = 0;
-        charisma = 0;
-    }
 
     public Stat(int str, int dex, int cons, int intel, int wis, int cha) {
         addStr(str);
@@ -45,7 +36,7 @@ public class Stat {
     }
     public int getConstitution(){return constitution;}
     public void addCons(int con){
-        constitution = con;
+        constitution += con;
     }
     public int getIntelligence(){return intelligence;}
     public void addIntel(int inte){
