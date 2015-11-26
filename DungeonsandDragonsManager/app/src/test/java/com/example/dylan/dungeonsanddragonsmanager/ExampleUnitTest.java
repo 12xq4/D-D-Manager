@@ -1,4 +1,4 @@
-package com.example.dylan.dungeonsanddragonsmanager;
+package com.dungeonsanddragonsmanager;
 
 import org.junit.Test;
 

@@ -8,198 +8,114 @@
         android:layout_height="wrap_content"
         android:text="@string/your_character"
         android:id="@+id/yourCharacter"
-        android:layout_gravity="center_horizontal"
-        android:textSize="50px"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="100px" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myClass"
-        android:id="@+id/characterClass"
-        android:textSize="50px"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:text="@string/attributes"
+        android:id="@+id/attributes"
         android:layout_below="@+id/yourCharacter"
-        android:layout_toLeftOf="@+id/yourCharacter"
-        android:layout_toStartOf="@+id/yourCharacter" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/chosenClass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:textSize="50px"
-        android:layout_alignTop="@+id/characterClass"
-        android:layout_toRightOf="@+id/goPlay"
-        android:layout_toEndOf="@+id/goPlay" />
+        android:background="@drawable/border" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:layout_below="@+id/attributes"
+        android:background="@drawable/border"
+        android:id="@+id/raceInformation">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/race"
+            android:id="@+id/raceHeader"
+            android:textSize="50px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/myRace"
+            android:textSize="50px"
+            android:scrollbars = "vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:layout_below="@+id/raceInformation"
+        android:background="@drawable/border"
+        android:id="@+id/classInformation">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myClass"
+            android:id="@+id/classHeader"
+            android:textSize="50px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/myClass"
+            android:textSize="50px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:scrollbars="vertical"
+            android:text="New Text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:background="@drawable/border"
+        android:layout_below="@+id/classInformation"
+        android:id="@+id/backgroundInformation">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/background"
+            android:id="@+id/backHeader"
+            android:textSize="50px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/background"
+            android:id="@+id/myBackground"
+            android:textSize="50px"
+            android:layout_below="@+id/backHeader"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:scrollbars="vertical"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/race"
-        android:id="@+id/characterRace"
-        android:textSize="50px"
-        android:layout_below="@+id/characterClass"
-        android:layout_alignLeft="@+id/characterClass"
-        android:layout_alignStart="@+id/characterClass" />
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/chosenRace"
-        android:textSize="50px"
-        android:layout_below="@+id/chosenClass"
-        android:layout_alignLeft="@+id/chosenClass"
-        android:layout_alignStart="@+id/chosenClass" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/background"
-        android:id="@+id/characterBackground"
-        android:textSize="50px"
-        android:layout_below="@+id/characterRace"
-        android:layout_alignLeft="@+id/characterRace"
-        android:layout_alignStart="@+id/characterRace" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/chosenBackground"
-        android:textSize="50px"
-        android:layout_below="@+id/chosenRace"
-        android:layout_alignLeft="@+id/chosenRace"
-        android:layout_alignStart="@+id/chosenRace" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/strength"
-        android:id="@+id/strength"
-        android:textSize="50px"
-        android:layout_below="@+id/characterBackground"
-        android:layout_alignLeft="@+id/characterBackground"
-        android:layout_alignStart="@+id/characterBackground"
-        android:layout_marginTop="71dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/stat1"
-        android:textSize="50px"
-        android:layout_alignTop="@+id/strength"
-        android:layout_alignLeft="@+id/chosenBackground"
-        android:layout_alignStart="@+id/chosenBackground" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/constitution"
-        android:id="@+id/constitution"
-        android:textSize="50px"
-        android:layout_below="@+id/strength"
-        android:layout_alignRight="@+id/strength"
-        android:layout_alignEnd="@+id/strength" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/stat2"
-        android:textSize="50px"
-        android:layout_above="@+id/stat3"
-        android:layout_alignLeft="@+id/stat3"
-        android:layout_alignStart="@+id/stat3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dexterity"
-        android:id="@+id/dexterity"
-        android:textSize="50px"
-        android:layout_below="@+id/constitution"
-        android:layout_alignRight="@+id/constitution"
-        android:layout_alignEnd="@+id/constitution" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/stat3"
-        android:textSize="50px"
-        android:layout_above="@+id/intelligence"
-        android:layout_alignLeft="@+id/stat1"
-        android:layout_alignStart="@+id/stat1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/intelligence"
-        android:id="@+id/intelligence"
-        android:textSize="50px"
-        android:layout_below="@+id/dexterity"
-        android:layout_alignRight="@+id/wisdom"
-        android:layout_alignEnd="@+id/wisdom" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/stat4"
-        android:textSize="50px"
-        android:layout_above="@+id/charisma"
-        android:layout_alignLeft="@+id/stat3"
-        android:layout_alignStart="@+id/stat3" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/charisma"
-        android:id="@+id/charisma"
-        android:textSize="50px"
-        android:layout_below="@+id/intelligence"
-        android:layout_alignRight="@+id/intelligence"
-        android:layout_alignEnd="@+id/intelligence" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/stat5"
-        android:textSize="50px"
-        android:layout_below="@+id/stat4"
-        android:layout_alignLeft="@+id/stat4"
-        android:layout_alignStart="@+id/stat4" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wisdom"
-        android:id="@+id/wisdom"
-        android:textSize="50px"
-        android:layout_below="@+id/charisma"
-        android:layout_alignLeft="@+id/dexterity"
-        android:layout_alignStart="@+id/dexterity" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/stat6"
-        android:textSize="50px"
-        android:layout_below="@+id/stat5"
-        android:layout_alignLeft="@+id/stat5"
-        android:layout_alignStart="@+id/stat5" />
-
-    <Button
+    <!-- <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/go_play"
         android:id="@+id/goPlay"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="154dp" />
+        android:layout_alignBottom="@+id/progressBar" /> -->
+
 </RelativeLayout>
