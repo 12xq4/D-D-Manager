@@ -3,65 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <!--<Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dwarf"
-                android:id="@+id/button1" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/elf"
-                android:id="@+id/button2" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/halfling"
-                android:id="@+id/button3" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/human"
-                android:id="@+id/button4" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dragonborn"
-                android:id="@+id/button5" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/gnome"
-                android:id="@+id/button6" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/half_elf"
-                android:id="@+id/button7" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/half_orc"
-                android:id="@+id/button8" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tiefling"
-                android:id="@+id/button9" />-->
-        </LinearLayout>
-    </HorizontalScrollView>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,8 +13,23 @@
         android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="79dp" />
+        android:layout_alignParentStart="true" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chooseRaceText"
+        >
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
 
     <ImageView
         android:layout_width="450px"
@@ -91,7 +47,7 @@
         android:textSize="50px"
         android:scrollbars = "vertical"
         android:layout_marginTop="79dp"
-        android:layout_below="@+id/chooseRaceText"
+        android:layout_below="@+id/horizontalScrollView"
         android:layout_alignParentRight="true"
         android:layout_marginRight="100px"
         android:paddingLeft="10px"

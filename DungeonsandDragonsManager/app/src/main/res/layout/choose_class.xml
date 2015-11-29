@@ -13,13 +13,13 @@
         android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="79dp" />
+        android:layout_alignParentStart="true" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/chooseClassText"
         >
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -45,7 +45,7 @@
         android:textSize="50px"
         android:scrollbars = "vertical"
         android:layout_marginTop="79dp"
-        android:layout_below="@+id/chooseClassText"
+        android:layout_below="@+id/horizontalScrollView"
         android:layout_alignParentRight="true"
         android:layout_marginRight="100px"
         android:paddingLeft="10px"
