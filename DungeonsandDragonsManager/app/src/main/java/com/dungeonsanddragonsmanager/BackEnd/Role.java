@@ -23,9 +23,24 @@ public abstract class Role {
         hitPoint = 0;
     }
 
-    abstract String displaySkills();
+    String displaySkills() {
+        String result = "Skills: \n";
+        for (Skills skill: skillset){
+            result += skill + "\n";
+        }
+        return result;
+    }
+
     abstract void setSkills();
-    abstract String displayEquipments();
+
+    String displayEquipments() {
+        String result = "Equipments: ";
+        for (String equi: equipment){
+            result += "            " +equi + "\n";
+        }
+        return result;
+    }
+
     abstract void setEquipments();
 
     public String toString(){

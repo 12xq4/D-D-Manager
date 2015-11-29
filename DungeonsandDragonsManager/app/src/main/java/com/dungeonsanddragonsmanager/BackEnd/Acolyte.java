@@ -29,15 +29,6 @@ public class Acolyte extends Background{
     }
 
     @Override
-    String displaySkills() {
-        String result = "\nSkills: \n";
-        for (Skills skill: skillset){
-            result += skill + "\n";
-        }
-        return result;
-    }
-
-    @Override
     void setEquipments() {
         equipment.add("a holy symbol");
         equipment.add("Prayer book or wheel");
@@ -48,26 +39,9 @@ public class Acolyte extends Background{
     }
 
     @Override
-    String displayEquipments() {
-        String result = "Equipments: ";
-        for (String equi: equipment){
-            result += "            " +equi + "\n";
-        }
-        return result;
-    }
-
-    @Override
     void setLanguage() {
         language.add("Two of your choice");
     }
 
-    @Override
-    String displayLanguages() {
-        String result = "Language:   ";
-        for (String lan:language) {
-            result += lan + "    ";
-        }
-        return result;
-    }
 
 }

@@ -17,13 +17,32 @@ public abstract class Background {
     ArrayList<String> language;
     ArrayList<String> equipment;
     
-     
+
     abstract void setSkills();
-    abstract String displaySkills();
+    String displaySkills() {
+        String result = "\nSkills: \n";
+        for (Skills skill : skillset) {
+            result += skill + "\n";
+        }
+        return result;
+    }
+
     abstract void setEquipments();
-    abstract String displayEquipments();
+    String displayEquipments() {
+        String result = "Equipments: ";
+        for (String equi: equipment){
+            result += "            " +equi + "\n";
+        }
+        return result;
+    }
     abstract void setLanguage();
-    abstract String displayLanguages();
+    String displayLanguages() {
+        String result = "Language:   ";
+        for (String lan:language) {
+            result += lan + "    ";
+        }
+        return result;
+    }
 
     public String toString(){
         return name + "\n" + displayLanguages() + displaySkills() + displayEquipments();
