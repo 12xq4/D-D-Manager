@@ -19,12 +19,12 @@ public abstract class Race {
     public static final int WIS = 4;
     public static final int CHA = 5;
 
-    String name;
-    int speed;
-    int hp;
-    Stat stat;
-    ArrayList<Skills> skillset;
-    ArrayList<String> language;
+    public String name;
+    public int speed;
+    public int hp;
+    public Stat stat;
+    public ArrayList<Skills> skillset;
+    public ArrayList<String> language;
     
     public Race () {
         this.stat = stat;

@@ -13,11 +13,19 @@ import android.widget.TextView;
 import com.dungeonsanddragonsmanager.BackEnd.Acolyte;
 import com.dungeonsanddragonsmanager.BackEnd.Background;
 import com.dungeonsanddragonsmanager.BackEnd.Barbarian;
+import com.dungeonsanddragonsmanager.BackEnd.Dragonborn;
 import com.dungeonsanddragonsmanager.BackEnd.Dwarf;
+import com.dungeonsanddragonsmanager.BackEnd.Elf;
+import com.dungeonsanddragonsmanager.BackEnd.Gnome;
+import com.dungeonsanddragonsmanager.BackEnd.Halfelf;
+import com.dungeonsanddragonsmanager.BackEnd.Halfling;
+import com.dungeonsanddragonsmanager.BackEnd.Halforc;
+import com.dungeonsanddragonsmanager.BackEnd.Human;
 import com.dungeonsanddragonsmanager.BackEnd.Race;
 import com.dungeonsanddragonsmanager.BackEnd.Role;
 import com.dungeonsanddragonsmanager.BackEnd.Skills;
 import com.dungeonsanddragonsmanager.BackEnd.Stat;
+import com.dungeonsanddragonsmanager.BackEnd.Tiefling;
 
 import java.util.ArrayList;
 
@@ -89,6 +97,46 @@ public class finalizeCharacter extends Activity {
         if ( myCharacter[0].equals("Dwarf")) {
             playerRace = new Dwarf(playerStat);
             raceHeader.setText("Race: Dwarf");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Elf")) {
+            playerRace = new Elf(playerStat);
+            raceHeader.setText("Race: Elf");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Halfling")) {
+            playerRace = new Halfling(playerStat);
+            raceHeader.setText("Race: Halfling");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Human")) {
+            playerRace = new Human(playerStat);
+            raceHeader.setText("Race: Human");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Dragonborn")) {
+            playerRace = new Dragonborn(playerStat);
+            raceHeader.setText("Race: Dragonborn");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Gnome")) {
+            playerRace = new Gnome(playerStat);
+            raceHeader.setText("Race: Gnome");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Half Elf")) {
+            playerRace = new Halfelf(playerStat);
+            raceHeader.setText("Race: Half-Elf");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Half Orc")) {
+            playerRace = new Halforc(playerStat);
+            raceHeader.setText("Race: Half-Orc");
+            chosenRace.setText(playerRace.toString());
+        }
+        else if ( myCharacter[0].equals("Tiefling")) {
+            playerRace = new Tiefling(playerStat);
+            raceHeader.setText("Race: Tiefling");
             chosenRace.setText(playerRace.toString());
         }
         if ( myCharacter[1].equals("Barbarian")) {
