@@ -10,6 +10,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.Display;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -40,7 +41,7 @@ public class chooseClass extends Activity {
 
     Button proceed;
 
-    ProgressBar progress;
+    ImageButton raceButton, classButton, bgButton, statsButton, fCharButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +70,21 @@ public class chooseClass extends Activity {
         proceed = (Button) findViewById(R.id.classProceed);
         proceed.setOnClickListener(new proceedButtonListener());
 
-        progress = (ProgressBar) findViewById(R.id.progressBar);
-        progress.setProgress(40);
+        raceButton = (ImageButton) findViewById(R.id.raceButton);
+        raceButton.setImageResource(R.drawable.green_circle);
+        raceButton.setOnClickListener(new raceButtonListener());
+
+        classButton = (ImageButton) findViewById(R.id.classButton);
+        classButton.setImageResource(R.drawable.blue_circle);
+
+        bgButton = (ImageButton) findViewById(R.id.backgroundButton);
+        bgButton.setImageResource(R.drawable.grey_circle);
+
+        statsButton = (ImageButton) findViewById(R.id.statsButton);
+        statsButton.setImageResource(R.drawable.grey_circle);
+
+        fCharButton = (ImageButton) findViewById(R.id.finalCharacterButton);
+        fCharButton.setImageResource(R.drawable.grey_circle);
 
         display.getSize(size);
         final int width = size.x;
@@ -262,6 +276,14 @@ public class chooseClass extends Activity {
         public void onClick(View v) {
             myCharacter[1] = selectedClass;
             Intent intent = new Intent(context, chooseBackground.class);
+            intent.putExtra("myCharacter", myCharacter);
+            startActivity(intent);
+        }
+    };
+
+    private class raceButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, chooseRace.class);
             intent.putExtra("myCharacter", myCharacter);
             startActivity(intent);
         }

@@ -10,6 +10,7 @@ import android.view.View;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -39,7 +40,7 @@ public class chooseBackground extends Activity {
 
     Button proceed;
 
-    ProgressBar progress;
+    ImageButton raceButton, classButton, bgButton, statsButton, fCharButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +70,22 @@ public class chooseBackground extends Activity {
         proceed.setOnClickListener(new proceedButtonListener());
         proceed.setEnabled(false);
 
-        progress = (ProgressBar) findViewById(R.id.progressBar);
-        progress.setProgress(60);
+        raceButton = (ImageButton) findViewById(R.id.raceButton);
+        raceButton.setImageResource(R.drawable.green_circle);
+        raceButton.setOnClickListener(new raceButtonListener());
+
+        classButton = (ImageButton) findViewById(R.id.classButton);
+        classButton.setImageResource(R.drawable.green_circle);
+        classButton.setOnClickListener(new classButtonListener());
+
+        bgButton = (ImageButton) findViewById(R.id.backgroundButton);
+        bgButton.setImageResource(R.drawable.blue_circle);
+
+        statsButton = (ImageButton) findViewById(R.id.statsButton);
+        statsButton.setImageResource(R.drawable.grey_circle);
+
+        fCharButton = (ImageButton) findViewById(R.id.finalCharacterButton);
+        fCharButton.setImageResource(R.drawable.grey_circle);
 
         display.getSize(size);
         final int width = size.x;
@@ -280,5 +295,26 @@ public class chooseBackground extends Activity {
           intent.putExtra("myCharacter", myCharacter);
           startActivity(intent);
      }
+    }
+
+    private class raceButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, chooseRace.class);
+            startActivity(intent);
+        }
+    }
+
+    private class classButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, chooseClass.class);
+            intent.putExtra("myCharacter", myCharacter);
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.media.Image;
 import android.os.Bundle;
 // import android.support.v7.widget.LinearLayoutManager;
 import android.text.method.ScrollingMovementMethod;
@@ -14,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -48,7 +50,7 @@ public class chooseRace extends Activity {
 
     Button proceed;
 
-    ProgressBar progress;
+    ImageButton raceButton, classButton, bgButton, statsButton, fCharButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +74,20 @@ public class chooseRace extends Activity {
         proceed = (Button) findViewById(R.id.raceProceed);
         proceed.setOnClickListener(new proceedButtonListener());
 
-        progress = (ProgressBar) findViewById(R.id.progressBar);
-        progress.setProgress(20);
+        raceButton = (ImageButton) findViewById(R.id.raceButton);
+        raceButton.setImageResource(R.drawable.blue_circle);
+
+        classButton = (ImageButton) findViewById(R.id.classButton);
+        classButton.setImageResource(R.drawable.grey_circle);
+
+        bgButton = (ImageButton) findViewById(R.id.backgroundButton);
+        bgButton.setImageResource(R.drawable.grey_circle);
+
+        statsButton = (ImageButton) findViewById(R.id.statsButton);
+        statsButton.setImageResource(R.drawable.grey_circle);
+
+        fCharButton = (ImageButton) findViewById(R.id.finalCharacterButton);
+        fCharButton.setImageResource(R.drawable.grey_circle);
 
         display.getSize(size);
         final int width = size.x;

@@ -15,6 +15,7 @@ import android.view.View.OnDragListener;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -44,7 +45,7 @@ public class chooseStats extends Activity {
 
     Button proceed;
 
-    ProgressBar progress;
+    ImageButton raceButton, classButton, bgButton, statsButton, fCharButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +62,23 @@ public class chooseStats extends Activity {
         proceed = (Button) findViewById(R.id.statsProceedButton);
         proceed.setOnClickListener(new proceedButtonListener());
 
-        progress = (ProgressBar) findViewById(R.id.progressBar);
-        progress.setProgress(80);
+        raceButton = (ImageButton) findViewById(R.id.raceButton);
+        raceButton.setImageResource(R.drawable.green_circle);
+        raceButton.setOnClickListener(new raceButtonListener());
+
+        classButton = (ImageButton) findViewById(R.id.classButton);
+        classButton.setImageResource(R.drawable.green_circle);
+        classButton.setOnClickListener(new classButtonListener());
+
+        bgButton = (ImageButton) findViewById(R.id.backgroundButton);
+        bgButton.setImageResource(R.drawable.green_circle);
+        bgButton.setOnClickListener(new bgButtonListener());
+
+        statsButton = (ImageButton) findViewById(R.id.statsButton);
+        statsButton.setImageResource(R.drawable.blue_circle);
+
+        fCharButton = (ImageButton) findViewById(R.id.finalCharacterButton);
+        fCharButton.setImageResource(R.drawable.grey_circle);
 
         // Points: 15, 14, 13, 12, 10, 8
         point1 = (TextView) findViewById(R.id.point1);
@@ -372,6 +388,29 @@ public class chooseStats extends Activity {
             Intent intent = new Intent(context, finalizeCharacter.class);
             intent.putExtra("myCharacter", myCharacter);
             intent.putExtra("selectedStats", selectedStats);
+            startActivity(intent);
+        }
+    };
+
+    private class raceButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, chooseRace.class);
+            startActivity(intent);
+        }
+    };
+
+    private class classButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, chooseClass.class);
+            intent.putExtra("myCharacter", myCharacter);
+            startActivity(intent);
+        }
+    };
+
+    private class bgButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, chooseBackground.class);
+            intent.putExtra("myCharacter", myCharacter);
             startActivity(intent);
         }
     };

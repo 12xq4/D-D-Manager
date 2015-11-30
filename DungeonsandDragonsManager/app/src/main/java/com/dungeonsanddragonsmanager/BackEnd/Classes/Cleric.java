@@ -32,7 +32,7 @@ public class Cleric extends Role {
         equipment.add("a mace or a warhammer (if proficient).");
         equipment.add("scale armor, leather armor, or chain mail (if proficient).");
         equipment.add("a light crossbow and 20 bolts or any simple weapon.");
-        equipment.add("a priest’s pack or an explorer’s pack.");
+        equipment.add("a priest's pack or an explorer's pack.");
         equipment.add("a shield");
         equipment.add("a holy symbol");
     }
