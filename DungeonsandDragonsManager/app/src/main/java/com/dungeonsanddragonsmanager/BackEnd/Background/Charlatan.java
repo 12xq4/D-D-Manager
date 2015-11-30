@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Charlatan extends Background{
     public Charlatan(){
         name = "Charlatan";
+        feature= "Second identity including documentation, acquaintainces, and disguises. Ability to forge documents, including official papers and personal letters (as long as you have seen an example of the kind of document or handwriting you are trying to copy)."
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();
