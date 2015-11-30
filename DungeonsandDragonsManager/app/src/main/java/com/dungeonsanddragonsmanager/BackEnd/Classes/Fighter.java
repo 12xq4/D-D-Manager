@@ -1,4 +1,7 @@
-package com.dungeonsanddragonsmanager.BackEnd;
+package com.dungeonsanddragonsmanager.BackEnd.Classes;
+
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+import com.dungeonsanddragonsmanager.BackEnd.Stat;
 
 import java.util.ArrayList;
 

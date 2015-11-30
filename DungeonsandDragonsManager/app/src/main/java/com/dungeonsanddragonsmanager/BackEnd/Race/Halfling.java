@@ -1,4 +1,4 @@
-package com.dungeonsanddragonsmanager.BackEnd;
+package com.dungeonsanddragonsmanager.BackEnd.Race;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,20 +9,18 @@ package com.dungeonsanddragonsmanager.BackEnd;
  *
  * @author jackqiao
  */
-import com.dungeonsanddragonsmanager.BackEnd.Race;
 import com.dungeonsanddragonsmanager.BackEnd.Skills;
 import com.dungeonsanddragonsmanager.BackEnd.Stat;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Gnome extends Race {
+public class Halfling extends Race {
 
-    public Gnome(Stat stat) {
-        name = "Gnome";
+    public Halfling (Stat stat) {
+        name = "Halfling";
         this.stat = stat;
         speed = 25;
-        this.stat.addIntel(2);
+        this.stat.addDex(2);
         language = new ArrayList<>();
         skillset = new ArrayList<>();
         setLanguage();
@@ -31,7 +29,7 @@ public class Gnome extends Race {
 
     void setLanguage(){
         language.add("Common");
-        language.add("Gnomish");
+        language.add("Halfling");
     }
 
     @Override
@@ -48,10 +46,12 @@ public class Gnome extends Race {
     }
 
     void setSkills(){
-        skillset.add(new Skills("Darkvision", "You can see in dim light within 60 feet of you " +
-                "as if it were bright light, and in darkness as if it were dim light."));
-        skillset.add(new Skills("Gnome Cunning", "You have advantage on all Intelligence, Wisdom, " +
-                "and Charisma saving throws against magic."));
+        skillset.add(new Skills("Lucky", "When you roll a 1 on an attack roll, ability check, " +
+                "or saving throw, you can reroll the die and must use the new roll."));
+        skillset.add(new Skills("Brave", "You have advantage on saving throws against being " +
+                "frightened."));
+        skillset.add(new Skills("Halfling Nimbleness", "You can move through the space of any " +
+                "creature that is of a size larger than yours."));
     }
 
     @Override

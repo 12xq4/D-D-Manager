@@ -1,4 +1,4 @@
-package com.dungeonsanddragonsmanager.BackEnd;
+package com.dungeonsanddragonsmanager.BackEnd.Race;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,36 +9,34 @@ package com.dungeonsanddragonsmanager.BackEnd;
  *
  * @author jackqiao
  */
-import com.dungeonsanddragonsmanager.BackEnd.Race;
 import com.dungeonsanddragonsmanager.BackEnd.Skills;
 import com.dungeonsanddragonsmanager.BackEnd.Stat;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Halfling extends Race {
-
-    public Halfling (Stat stat) {
-        name = "Halfling";
+public class Dwarf extends Race {
+    
+    public Dwarf (Stat stat) {
+        name = "Dwarf";
         this.stat = stat;
         speed = 25;
-        this.stat.addDex(2);
+        this.stat.addCons(2);
         language = new ArrayList<>();
         skillset = new ArrayList<>();
         setLanguage();
         setSkills();
     }
-
+    
     void setLanguage(){
         language.add("Common");
-        language.add("Halfling");
+        language.add("Dwarvish");
     }
 
     @Override
     String displayLanguage() {
         String result = "Language:   ";
         for (String lan:language) {
-            result += lan + "    ";
+             result += lan + "    ";
         }
         return result;
     }
@@ -46,14 +44,14 @@ public class Halfling extends Race {
     ArrayList<String> getLanguage() {
         return language;
     }
-
+    
     void setSkills(){
-        skillset.add(new Skills("Lucky", "When you roll a 1 on an attack roll, ability check, " +
-                "or saving throw, you can reroll the die and must use the new roll."));
-        skillset.add(new Skills("Brave", "You have advantage on saving throws against being " +
-                "frightened."));
-        skillset.add(new Skills("Halfling Nimbleness", "You can move through the space of any " +
-                "creature that is of a size larger than yours."));
+        skillset.add(new Skills("Heavy Armor Expertise", "Speed is not reduced by wearing heavy armor."));
+        skillset.add(new Skills("Darkvision", "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light."));
+        skillset.add(new Skills("Dwarven Resilience", "You have advantage on saving throws against poison, and you have resistance against poison damage."));
+        skillset.add(new Skills("Weapon Proficiencies", "Battleaxe, handaxe, throwing hammer, warhammer."));
+        skillset.add(new Skills("Tool Proficiencies", "One of your choice: Smith's tools, brewer's supplies, or mason's tools."));
+        skillset.add(new Skills("Stonecunning","Whenever you make a History check related to the origin of stonework, add double proficiency to the roll."));
     }
 
     @Override

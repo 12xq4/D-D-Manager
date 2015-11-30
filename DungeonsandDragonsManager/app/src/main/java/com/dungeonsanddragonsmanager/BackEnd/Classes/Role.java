@@ -1,33 +1,41 @@
-package com.dungeonsanddragonsmanager.BackEnd;
+package com.dungeonsanddragonsmanager.BackEnd.Classes;
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+import com.dungeonsanddragonsmanager.BackEnd.Stat;
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.util.*;
 
 /**
  *
  * @author jackqiao
  */
-
-public abstract class Background {
+public abstract class Role {
     String name;
     ArrayList<Skills> skillset;
-    ArrayList<String> language;
+    String hitDice;
+    int hitPoint;
     ArrayList<String> equipment;
-    
+    Stat stat;
+    public Role () {
+        hitDice = "0";
+        hitPoint = 0;
+    }
 
-    abstract void setSkills();
     String displaySkills() {
-        String result = "\nSkills: \n";
-        for (Skills skill : skillset) {
+        String result = "Skills: \n";
+        for (Skills skill: skillset){
             result += skill + "\n";
         }
         return result;
     }
 
-    abstract void setEquipments();
+    abstract void setSkills();
+
     String displayEquipments() {
         String result = "Equipments: ";
         for (String equi: equipment){
@@ -35,16 +43,11 @@ public abstract class Background {
         }
         return result;
     }
-    abstract void setLanguage();
-    String displayLanguages() {
-        String result = "Language:   ";
-        for (String lan:language) {
-            result += lan + "    ";
-        }
-        return result;
-    }
+
+    abstract void setEquipments();
 
     public String toString(){
-        return name + "\n" + displayLanguages() + displaySkills() + displayEquipments();
+        return "Hitpoints:    " + hitPoint + "\nAttack:    " + hitDice + "\n"
+                + displaySkills() + displayEquipments();
     }
 }

@@ -10,22 +10,22 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.dungeonsanddragonsmanager.BackEnd.Acolyte;
-import com.dungeonsanddragonsmanager.BackEnd.Background;
-import com.dungeonsanddragonsmanager.BackEnd.Barbarian;
-import com.dungeonsanddragonsmanager.BackEnd.Dragonborn;
-import com.dungeonsanddragonsmanager.BackEnd.Dwarf;
-import com.dungeonsanddragonsmanager.BackEnd.Elf;
-import com.dungeonsanddragonsmanager.BackEnd.Gnome;
-import com.dungeonsanddragonsmanager.BackEnd.Halfelf;
-import com.dungeonsanddragonsmanager.BackEnd.Halfling;
-import com.dungeonsanddragonsmanager.BackEnd.Halforc;
-import com.dungeonsanddragonsmanager.BackEnd.Human;
-import com.dungeonsanddragonsmanager.BackEnd.Race;
-import com.dungeonsanddragonsmanager.BackEnd.Role;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Acolyte;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Background;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Barbarian;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Dragonborn;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Dwarf;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Elf;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Gnome;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Halfelf;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Halfling;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Halforc;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Human;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Race;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Role;
 import com.dungeonsanddragonsmanager.BackEnd.Skills;
 import com.dungeonsanddragonsmanager.BackEnd.Stat;
-import com.dungeonsanddragonsmanager.BackEnd.Tiefling;
+import com.dungeonsanddragonsmanager.BackEnd.Race.Tiefling;
 
 import java.util.ArrayList;
 
