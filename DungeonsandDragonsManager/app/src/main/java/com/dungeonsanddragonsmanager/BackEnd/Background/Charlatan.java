@@ -19,7 +19,7 @@ public class Charlatan extends Background{
 
     @Override
     void setSkills() {
-        skillset.add(new Skills("Skill Proficiency", "Deception", "Slight of Hand"));
+        skillset.add(new Skills("Skill Proficiency", "Deception, Slight of Hand"));
     }
 
     @Override
