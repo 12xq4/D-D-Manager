@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Criminal extends Background {
     public Criminal(){
         name = "Criminal";
-        feature = "You have a reliable and trustworthy contact who acts as
+        feature = "Criminal Contact \nYou have a reliable and trustworthy contact who acts as
 your liaison to a network of other criminals. You know
 how to get messages to and from your contact, even
 over great distances; specifically, you know the local
