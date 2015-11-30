@@ -35,7 +35,7 @@ public class Ranger extends Role {
                 "   - When you forage, you find twice as much food as you normally would." +
                 "   - While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area." +
                 "You choose additional favored terrain types at 6th and 10th level."));
-        skillset.add(new Skills("Bonus", "Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival."));
+        skillset.add(new Skills("Bonus", "Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival."));
     }
 
     void setEquipments(){
