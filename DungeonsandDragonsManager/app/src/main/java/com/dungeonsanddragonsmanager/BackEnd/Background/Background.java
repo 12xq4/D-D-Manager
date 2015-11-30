@@ -48,6 +48,6 @@ public abstract class Background {
     }
 
     public String toString(){
-        return name + "\n" + displayLanguages() + displaySkills() + displayEquipments();
+        return name + "\n" + displayLanguages() + displaySkills() + displayEquipments() + feature;
     }
 }
