@@ -14,7 +14,7 @@ nature of this revelation depends on the nature of your
 seclusion. It might be a great truth about the cosmos,
 the deities, or the forces of nature. It could be a site that no one else
 has ever seen. Work with your DM to determine the details of your
-discovery and its impact on the campaign."
+discovery and its impact on the campaign.";
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();
@@ -25,7 +25,7 @@ discovery and its impact on the campaign."
 
     @Override
     void setSkills() {
-        skillset.add(new Skill("Skill Proficiency", "Medicine, Religion")
+        skillset.add(new Skill("Skill Proficiency", "Medicine, Religion");
     }
 
     @Override
