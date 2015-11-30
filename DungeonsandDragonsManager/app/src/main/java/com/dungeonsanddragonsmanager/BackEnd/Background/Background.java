@@ -15,6 +15,7 @@ import java.util.*;
 
 public abstract class Background {
     String name;
+    String feature;
     ArrayList<Skills> skillset;
     ArrayList<String> language;
     ArrayList<String> equipment;
