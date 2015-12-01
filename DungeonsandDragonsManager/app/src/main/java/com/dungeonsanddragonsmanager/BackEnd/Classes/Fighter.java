@@ -39,6 +39,6 @@ public class Fighter extends Role {
         equipment.add("chain mail or leather armor + longbow and 20 arrows ");
         equipment.add("a martial weapon and a shield or two martial weapons.");
         equipment.add("a light crossbow and 20 bolts or two handaxes ");
-        equipment.add("a dungeoneer’s pack or an explorer’s pack.");
+        equipment.add("a dungeoneer's pack or an explorer's pack.");
     }
 }

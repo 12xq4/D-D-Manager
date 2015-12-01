@@ -32,7 +32,7 @@ public class Druid extends Role {
         equipment.add("a wooden shield or any simple weapon.");
         equipment.add("a scimitar or any simple melee weapon.");
         equipment.add("Leather armor.");
-        equipment.add("an explorer’s pack.");
+        equipment.add("an explorer's pack.");
         equipment.add("a druidic focus");
     }
 }

@@ -35,7 +35,7 @@ public class Monk extends Role {
 
     void setEquipments(){
         equipment.add("a shortsword or any simple weapon.");
-        equipment.add("a dungeoneer’s pack or an explorer’s pack.");
+        equipment.add("a dungeoneer's pack or an explorer's pack.");
         equipment.add("10 darts.");
     }
 }

@@ -65,12 +65,49 @@
         android:layout_marginBottom="195dp"
         android:enabled="false" />
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
+        android:id="@+id/backgroundButton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#0000"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/classButton"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/backgroundButton"
+        android:layout_toStartOf="@+id/backgroundButton"
+        android:background="#0000"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceButton"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/classButton"
+        android:layout_toStartOf="@+id/classButton"
+        android:background="#0000"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statsButton"
+        android:layout_alignTop="@+id/backgroundButton"
+        android:layout_toRightOf="@+id/backgroundButton"
+        android:layout_toEndOf="@+id/backgroundButton"
+        android:background="#0000"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finalCharacterButton"
+        android:layout_alignTop="@+id/statsButton"
+        android:layout_toRightOf="@+id/statsButton"
+        android:layout_toEndOf="@+id/statsButton"
+        android:background="#0000"/>
+
 
 </RelativeLayout>

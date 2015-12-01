@@ -36,7 +36,7 @@ public class Paladin extends Role{
     void setEquipments(){
         equipment.add("a martial weapon and a shield or two martial weapons.");
         equipment.add("five javelins or any simple melee weapon.");
-        equipment.add("a priest’s pack or an explorer’s pack.");
+        equipment.add("a priest's pack or an explorer's pack.");
         equipment.add("a chain mail.");
         equipment.add("a holy symbol.");
     }

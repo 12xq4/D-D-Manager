@@ -30,7 +30,7 @@ public class Bard extends Role {
 
     void setEquipments(){
         equipment.add("a rapier, a longsword, or any simple weapon.");
-        equipment.add("a diplomat’s pack or an entertainer's pack.");
+        equipment.add("a diplomat's pack or an entertainer's pack.");
         equipment.add("one musical instrument.");
         equipment.add("Leather armor and a dagger.");
     }
