@@ -1,5 +1,7 @@
 package com.dungeonsanddragonsmanager.BackEnd.Background;
 
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+
 import java.util.ArrayList;
 
 /**
@@ -8,15 +10,12 @@ import java.util.ArrayList;
 public class Soldier extends Background {
     public Soldier(){
         name = "Soldier";
-        feature = "Military Rank \n You have a military rank from your career as a soldier.
-Soldiers loyal to your former military organization
-still recognize your authority and influence, and they
-defer to you if they are of a lower rank. You can invoke
-your rank to exert influence over other soldiers and
-requisition simple equipment or horses for temporary
-use. You can also usually gain access to friendly
-military encampments and fortresses where your
-rank is recognized.";
+        feature = "Military Rank \n You have a military rank from your career as a soldier. " +
+                "Soldiers loyal to your former military organization still recognize your " +
+                "authority and influence, and they defer to you if they are of a lower rank. You " +
+                "can invoke your rank to exert influence over other soldiers and requisition " +
+                "simple equipment or horses for temporary use. You can also usually gain access " +
+                "to friendly military encampments and fortresses where your rank is recognized.";
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();

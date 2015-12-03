@@ -1,5 +1,7 @@
 package com.dungeonsanddragonsmanager.BackEnd.Background;
 
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+
 import java.util.ArrayList;
 
 /**
@@ -8,7 +10,13 @@ import java.util.ArrayList;
 public class Sailor extends Background {
     public Sailor(){
         name = "Sailor";
-        feature = "Ship's Passage \n When you need to, you can secure free passage on a sailing ship for yourself and your companions.  You might sail on the ship you served on, or another ship you have good relations with.  Because you're calling in a favor, you can't be certain of a schedule or route that will meet your every need.  Your DM will determine how long it takes to get where you need to go. In return for free passage, you and your companions are expected to assist the crew during the voyage";
+        feature = "Ship's Passage \n When you need to, you can secure free passage on a sailing " +
+                "ship for yourself and your companions.  You might sail on the ship you served " +
+                "on, or another ship you have good relations with.  Because you're calling in a " +
+                "favor, you can't be certain of a schedule or route that will meet your every " +
+                "need.  Your DM will determine how long it takes to get where you need to go. " +
+                "In return for free passage, you and your companions are expected to assist the " +
+                "crew during the voyage";
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();
@@ -33,6 +41,6 @@ public class Sailor extends Background {
 
     @Override
     void setLanguage() {
-        language.add("Common")
+        language.add("Common");
     }
 }

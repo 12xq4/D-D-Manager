@@ -1,5 +1,7 @@
 package com.dungeonsanddragonsmanager.BackEnd.Background;
 
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+
 import java.util.ArrayList;
 
 /**
@@ -8,9 +10,11 @@ import java.util.ArrayList;
 public class Outlander extends Background {
     public Outlander(){
         name = "Outlander";
-        feature = "Wanderer \n 
-        You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you.  
-        In addition, you can find food and fresh water for yourself and up to five other people each day, provided the land offers berries, small game, water, etc.";
+        feature = "Wanderer \n You have an excellent memory for maps and geography, and you can" +
+                " always recall the general layout of terrain, settlements, and other features " +
+                "around you. In addition, you can find food and fresh water for yourself and up " +
+                "to five other people each day, provided the land offers berries, small game, " +
+                "water, etc.";
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();

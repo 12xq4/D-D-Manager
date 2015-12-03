@@ -1,5 +1,7 @@
 package com.dungeonsanddragonsmanager.BackEnd.Background;
 
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+
 import java.util.ArrayList;
 
 /**
@@ -8,7 +10,13 @@ import java.util.ArrayList;
 public class Sage extends Background {
     public Sage(){
         name = "Sage";
-        feature = "Researcher \n When you attempt to learn or recall a piece of lore, if you do not know that info, you often know where and from whom you can obtain it.  Usually, this info comes from a library, scriptorium, university, or a sage or another learned person or creature.  Your DM might rule that the knowledge you seek is secreted away in almost inacessible place, or that it simply cannot be found.  Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign";
+        feature = "Researcher \n When you attempt to learn or recall a piece of lore, if you do " +
+                "not know that info, you often know where and from whom you can obtain it.  " +
+                "Usually, this info comes from a library, scriptorium, university, or a sage or " +
+                "another learned person or creature.  Your DM might rule that the knowledge you " +
+                "seek is secreted away in almost inacessible place, or that it simply cannot be " +
+                "found.  Unearthing the deepest secrets of the multiverse can require an adventure " +
+                "or even a whole campaign";
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();
@@ -34,7 +42,7 @@ public class Sage extends Background {
 
     @Override
     void setLanguage() {
-        language.set("Common");
-        language.set("Two of your choice")
+        language.add("Common");
+        language.add("Two of your choice");
     }
 }

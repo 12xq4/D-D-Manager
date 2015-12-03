@@ -1,5 +1,7 @@
 package com.dungeonsanddragonsmanager.BackEnd.Background;
 
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+
 import java.util.ArrayList;
 
 /**
@@ -8,14 +10,12 @@ import java.util.ArrayList;
 public class Noble extends Background {
     public Noble(){
         name = "Noble";
-        feature = "Position of Privilege \n Thanks to your noble birth, people are inclined to
-think the best of you. You are welcome in high society,
-and people assume you have the right to be wherever
-you are. The common folk make every effort to
-accommodate you and avoid your displeasure, and other
-people of high birth treat you as a member o f the same
-social sphere. You can secure an audience with a local
-noble if you need to.";
+        feature = "Position of Privilege \n Thanks to your noble birth, people are inclined to " +
+                "think the best of you. You are welcome in high society, and people assume you " +
+                "have the right to be wherever you are. The common folk make every effort to " +
+                "accommodate you and avoid your displeasure, and other people of high birth treat" +
+                " you as a member of the same social sphere. You can secure an audience with a " +
+                "local noble if you need to.";
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();
