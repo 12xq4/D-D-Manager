@@ -28,8 +28,8 @@ public class newOrExisting extends Activity {
     final Context context = this;
 
     private Button newPlayer, existingPlayer;
-    String[] stat;
-    String[] character;
+    String[] stat = new String[6];
+    String[] character = new String[3];
 
     FileInputStream fis;
 
