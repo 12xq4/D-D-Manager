@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.LiveFolders;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,18 @@ import android.widget.TextView;
 
 import com.dungeonsanddragonsmanager.BackEnd.Background.Acolyte;
 import com.dungeonsanddragonsmanager.BackEnd.Background.Background;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Charlatan;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Criminal;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Entertainer;
+import com.dungeonsanddragonsmanager.BackEnd.Background.FolkHero;
+import com.dungeonsanddragonsmanager.BackEnd.Background.GuildArtisan;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Hermit;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Noble;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Outlander;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Sage;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Sailor;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Soldier;
+import com.dungeonsanddragonsmanager.BackEnd.Background.Urchin;
 import com.dungeonsanddragonsmanager.BackEnd.Classes.Barbarian;
 import com.dungeonsanddragonsmanager.BackEnd.Classes.Bard;
 import com.dungeonsanddragonsmanager.BackEnd.Classes.Cleric;
@@ -229,6 +242,66 @@ public class finalizeCharacter extends Activity {
         if ( myCharacter[2].equals("Acolyte")) {
             playerBackground = new Acolyte();
             backgroundHeader.setText("Background: Acolyte");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Charlatan")) {
+            playerBackground = new Charlatan();
+            backgroundHeader.setText("Background: Charlatan");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Criminal")) {
+            playerBackground = new Criminal();
+            backgroundHeader.setText("Background: Criminal");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Entertainer")) {
+            playerBackground = new Entertainer();
+            backgroundHeader.setText("Background: Entertainer");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Folk Hero")) {
+            playerBackground = new FolkHero();
+            backgroundHeader.setText("Background: Folk Hero");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Guild Artisan")) {
+            playerBackground = new GuildArtisan();
+            backgroundHeader.setText("Background: Guild Artisan");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Hermit")) {
+            playerBackground = new Hermit();
+            backgroundHeader.setText("Background: Hermit");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Noble")) {
+            playerBackground = new Noble();
+            backgroundHeader.setText("Background: Noble");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Outlander")) {
+            playerBackground = new Outlander();
+            backgroundHeader.setText("Background: Outlander");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Sage")) {
+            playerBackground = new Sage();
+            backgroundHeader.setText("Background: Sage");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Sailor")) {
+            playerBackground = new Sailor();
+            backgroundHeader.setText("Background: Sailor");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Soldier")) {
+            playerBackground = new Soldier();
+            backgroundHeader.setText("Background: Soldier");
+            chosenBackground.setText(playerBackground.toString());
+        }
+        else if ( myCharacter[2].equals("Urchin")) {
+            playerBackground = new Urchin();
+            backgroundHeader.setText("Background: Urchin");
             chosenBackground.setText(playerBackground.toString());
         }
 

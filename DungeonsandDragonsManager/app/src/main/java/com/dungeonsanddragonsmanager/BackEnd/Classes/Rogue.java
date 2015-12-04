@@ -20,7 +20,7 @@ public class Rogue extends Role {
         setSkills();
     }
     void setSkills() {
-        skillset.add(new Skills("Armor and Weapon Proficiencies", "Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords."));
+        skillset.add(new Skills("Armor and Weapon Proficiencies", "Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords ."));
         skillset.add(new Skills("Saving throw proficiencies", "Dexterity, Intelligence."));
         skillset.add(new Skills("Expertise", ", choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves� tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies." +
                 "At 6th level, you can choose two more of your proficiencies to gain this benefit."));

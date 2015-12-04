@@ -1,5 +1,7 @@
 package com.dungeonsanddragonsmanager.BackEnd.Background;
 
+import com.dungeonsanddragonsmanager.BackEnd.Skills;
+
 import java.util.ArrayList;
 
 /**
@@ -8,12 +10,11 @@ import java.util.ArrayList;
 public class Criminal extends Background {
     public Criminal(){
         name = "Criminal";
-        feature = "Criminal Contact \nYou have a reliable and trustworthy contact who acts as
-your liaison to a network of other criminals. You know
-how to get messages to and from your contact, even
-over great distances; specifically, you know the local
-messengers, corrupt caravan masters, and seedy sailors
-who can deliver messages for you.";
+        feature = "Criminal Contact \nYou have a reliable and trustworthy contact who acts as" +
+                  "your liaison to a network of other criminals. You know how to get messages to " +
+                  "and from your contact, even over great distances; specifically, you know the " +
+                  "local messengers, corrupt caravan masters, and seedy sailors who can deliver " +
+                  "messages for you.";
         skillset = new ArrayList<>();
         language = new ArrayList<>();
         equipment= new ArrayList<>();
