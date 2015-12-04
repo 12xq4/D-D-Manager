@@ -37,6 +37,8 @@ import com.dungeonsanddragonsmanager.BackEnd.Skills;
 import com.dungeonsanddragonsmanager.BackEnd.Stat;
 import com.dungeonsanddragonsmanager.BackEnd.Races.Tiefling;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 
@@ -52,6 +54,7 @@ public class finalizeCharacter extends Activity {
 
     String raceName, className, backName;
     String attString;
+    public static final String SAVE = "Saved_Info";
 
     TextView yourCharacter;
     TextView raceHeader, classHeader, backgroundHeader;
@@ -73,6 +76,8 @@ public class finalizeCharacter extends Activity {
 
     ImageButton raceButton, classButton, bgButton, statsButton, fCharButton;
 
+    FileOutputStream fos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +88,9 @@ public class finalizeCharacter extends Activity {
 
         myCharacter = (String[]) bundle.get("myCharacter");
         chosenStats = (String[]) bundle.get("selectedStats");
+
+        File file = new File(context.getFilesDir(), SAVE);
+        writeToSave(myCharacter, chosenStats, file);
 
         yourCharacter = (TextView) findViewById(R.id.yourCharacter);
 
@@ -268,5 +276,23 @@ public class finalizeCharacter extends Activity {
         }
     };
 
+    private void writeToSave(String[] choice, String[] stat, File file) {
+        String player_stat = "";
+        String player_choice = "";
+        for (int h = 0; h<choice.length; h++){
+            player_choice+= choice[h] + ",";
+        }
+        for (int i = 0; i<stat.length; i++){
+            player_stat+= stat[i] + ",";
+        }
 
+        try {
+            fos = openFileOutput(SAVE, context.MODE_PRIVATE);
+            fos.write(player_choice.getBytes());
+            fos.write(player_stat.getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
