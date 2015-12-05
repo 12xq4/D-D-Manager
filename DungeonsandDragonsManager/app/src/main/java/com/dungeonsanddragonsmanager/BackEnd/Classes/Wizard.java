@@ -25,6 +25,9 @@ public class Wizard extends Role {
         skillset.add(new Skills("Armor and Weapon Proficiencies", "Daggers, darts, slings, quarterstaffs, light crossbows."));
         skillset.add(new Skills("Saving throw proficiencies", "Intelligence, Wisdom."));
         // More to come
+        skillset.add(new Skills("Spell casting", "You have the ability to cast spells."));
+        skillset.add(new Skills("Arcane Recovery", "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. " +
+                "The spell slots can have a combined level that is equal to or less than half your wizard level,  and none of the slots can be 6th level or higher."));
         skillset.add(new Skills("Bonus", "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion."));
     }
 
