@@ -24,9 +24,7 @@ public class Druid extends Role {
         skillset.add(new Skills("Armor and Weapon Proficiencies","Light armor, medium armor, shield (Druid will not wear armor or shield made of metal), " +
                 "Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears ."));
         skillset.add(new Skills("Saving throw proficiencies", "Intelligence, Wisdom"));
-        skillset.add(new Skills("Spell casting", "You have the ability to cast spells."));
-        skillset.add(new Skills("Druidic", "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. " +
-                "Others spot the message’s presence with a successful difficulty class check of 15 but can’t decipher it without magic."));
+
         skillset.add(new Skills("Bonus", "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival"));
     }
 

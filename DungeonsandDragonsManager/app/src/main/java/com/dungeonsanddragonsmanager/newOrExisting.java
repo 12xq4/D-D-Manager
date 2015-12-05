@@ -30,6 +30,7 @@ public class newOrExisting extends Activity {
     private Button newPlayer, existingPlayer;
     String[] stat = new String[6];
     String[] character = new String[3];
+    String[] myCharacter = {"", "", ""};
 
     FileInputStream fis;
 
@@ -48,6 +49,7 @@ public class newOrExisting extends Activity {
     private class newPlayerButtonListener implements OnClickListener {
         public void onClick(View v) {
             Intent intent = new Intent(context, chooseRace.class);
+            intent.putExtra("myCharacter", myCharacter);
             startActivity(intent);
         }
     };

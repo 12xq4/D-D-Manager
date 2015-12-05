@@ -35,7 +35,7 @@ public class Warlock extends Role {
     void setEquipments() {
         equipment.add("a light crossbow and 20 bolts or any simple weapon.");
         equipment.add("a component pouch or an arcane focus.");
-        equipment.add("a scholar’s pack or a dungeoneer’s pack ");
+        equipment.add("a scholar's pack or a dungeoneer's pack ");
         equipment.add("leather armor");
         equipment.add("any simple weapon");
         equipment.add("two daggers.");

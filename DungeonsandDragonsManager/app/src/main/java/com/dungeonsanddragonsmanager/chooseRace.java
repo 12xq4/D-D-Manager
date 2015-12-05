@@ -36,6 +36,8 @@ public class chooseRace extends Activity {
 
     String[] myCharacter = new String[3];
 
+    String savedRace;
+
     String selectedRace;
 
     TextView chooseRaceText;
@@ -57,6 +59,9 @@ public class chooseRace extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_race);
 
+        Intent preIntent = getIntent();
+        Bundle bundle = preIntent.getExtras();
+
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
 
@@ -74,6 +79,8 @@ public class chooseRace extends Activity {
         proceed = (Button) findViewById(R.id.raceProceed);
         proceed.setOnClickListener(new proceedButtonListener());
 
+        myCharacter = (String[]) bundle.get("myCharacter");
+
         raceButton = (ImageButton) findViewById(R.id.raceButton);
         raceButton.setImageResource(R.drawable.blue_circle);
 
@@ -88,6 +95,7 @@ public class chooseRace extends Activity {
 
         fCharButton = (ImageButton) findViewById(R.id.finalCharacterButton);
         fCharButton.setImageResource(R.drawable.grey_circle);
+
 
         display.getSize(size);
         final int width = size.x;
@@ -227,6 +235,80 @@ public class chooseRace extends Activity {
         linearLayout.addView(halfElfButton);
         linearLayout.addView(halfOrcButton);
         linearLayout.addView(tieflingButton);
+
+        if ( ! myCharacter[0].equals("") ) {
+            savedRace = myCharacter[0];
+            if ( savedRace.equals("Dragonborn") ) {
+                raceImage.setImageResource(R.drawable.dragonborn);
+                raceDescription.setText(R.string.dragonborn_description);
+                proceed.setEnabled(true);
+                selectedRace = "Dragonborn";
+            }
+            else if ( savedRace.equals("Dwarf") ) {
+                int scrollX = (dwarfButton.getLeft() - (width / 2)) + (dwarfButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.dwarf);
+                raceDescription.setText(R.string.dwarf_description);
+                proceed.setEnabled(true);
+                selectedRace = "Dwarf";
+            }
+            else if ( savedRace.equals("Elf") ) {
+                int scrollX = (elfButton.getLeft() - (width / 2)) + (elfButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.elf);
+                raceDescription.setText(R.string.elf_description);
+                proceed.setEnabled(true);
+                selectedRace = "Elf";
+            }
+            else if ( savedRace.equals("Gnome") ) {
+                int scrollX = (gnomeButton.getLeft() - (width / 2)) + (gnomeButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.gnome);
+                raceDescription.setText(R.string.gnome_description);
+                proceed.setEnabled(true);
+                selectedRace = "Gnome";
+            }
+            else if ( savedRace.equals("Half Elf") ) {
+                int scrollX = (halfElfButton.getLeft() - (width / 2)) + (halfElfButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.half_elf);
+                raceDescription.setText(R.string.half_elf_description);
+                proceed.setEnabled(true);
+                selectedRace = "Half Elf";
+            }
+            else if ( savedRace.equals("Halfling") ) {
+                int scrollX = (halflingButton.getLeft() - (width / 2)) + (halflingButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.halfling);
+                raceDescription.setText(R.string.halfling_description);
+                proceed.setEnabled(true);
+                selectedRace = "Halfling";
+            }
+            else if ( savedRace.equals("Half Orc") ) {
+                int scrollX = (halfOrcButton.getLeft() - (width / 2)) + (halfOrcButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.half_orc);
+                raceDescription.setText(R.string.half_orc_description);
+                proceed.setEnabled(true);
+                selectedRace = "Half Orc";
+            }
+            else if ( savedRace.equals("Human") ) {
+                int scrollX = (humanButton.getLeft() - (width / 2)) + (humanButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.human);
+                raceDescription.setText(R.string.human_description);
+                proceed.setEnabled(true);
+                selectedRace = "Human";
+            }
+            else if ( savedRace.equals("Tiefling") ) {
+                int scrollX = (tieflingButton.getLeft() - (width / 2)) + (tieflingButton.getWidth() / 2);
+                hsr.smoothScrollTo(scrollX, 0);
+                raceImage.setImageResource(R.drawable.tiefling);
+                raceDescription.setText(R.string.tiefling_description);
+                proceed.setEnabled(true);
+                selectedRace = "Tiefling";
+            }
+        }
     }
 
     private class proceedButtonListener implements View.OnClickListener {

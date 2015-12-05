@@ -28,6 +28,8 @@ public class chooseBackground extends Activity {
 
     String selectedBackground;
 
+    String savedBackground;
+
     ImageView backgroundImage;
 
     TextView chooseBackgroundText;
@@ -273,6 +275,88 @@ public class chooseBackground extends Activity {
             }
         });
 
+        if ( ! myCharacter[2].equals("") ) {
+            savedBackground = myCharacter[2];
+            if (savedBackground.equals("Acolyte")) {
+                backgroundImage.setImageResource(R.drawable.acolyte);
+                backgroundDescription.setText(R.string.acolyte_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Acolyte";
+            }
+            else if (savedBackground.equals("Charlatan")) {
+                backgroundImage.setImageResource(R.drawable.charlatan);
+                backgroundDescription.setText(R.string.charlatan_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Charlatan";
+            }
+            else if (savedBackground.equals("Criminal")) {
+                backgroundImage.setImageResource(R.drawable.criminal);
+                backgroundDescription.setText(R.string.criminal_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Criminal";
+            }
+            else if (savedBackground.equals("Entertainer")) {
+                backgroundImage.setImageResource(R.drawable.entertainer);
+                backgroundDescription.setText(R.string.entertainer_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Entertainer";
+            }
+            else if (savedBackground.equals("Folk Hero")) {
+                backgroundImage.setImageResource(R.drawable.folk_hero);
+                backgroundDescription.setText(R.string.folk_hero_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Folk Hero";
+            }
+            else if (savedBackground.equals("Guild Artisan")) {
+                backgroundImage.setImageResource(R.drawable.guild_artisan);
+                backgroundDescription.setText(R.string.guild_artisan_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Guild Artisan";
+            }
+            else if (savedBackground.equals("Hermit")) {
+                backgroundImage.setImageResource(R.drawable.hermit);
+                backgroundDescription.setText(R.string.hermit_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Hermit";
+            }
+            else if (savedBackground.equals("Noble")) {
+                backgroundImage.setImageResource(R.drawable.noble);
+                backgroundDescription.setText(R.string.noble_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Noble";
+            }
+            else if (savedBackground.equals("Outlander")) {
+                backgroundImage.setImageResource(R.drawable.outlander);
+                backgroundDescription.setText(R.string.outlander_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Outlander";
+            }
+            else if (savedBackground.equals("Sage")) {
+                backgroundImage.setImageResource(R.drawable.sage);
+                backgroundDescription.setText(R.string.sage_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Sage";
+            }
+            else if (savedBackground.equals("Sailor")) {
+                backgroundImage.setImageResource(R.drawable.sailor);
+                backgroundDescription.setText(R.string.sailor_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Sailor";
+            }
+            else if (savedBackground.equals("Soldier")) {
+                backgroundImage.setImageResource(R.drawable.soldier);
+                backgroundDescription.setText(R.string.soldier_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Soldier";
+            }
+            else if (savedBackground.equals("Urchin")) {
+                backgroundImage.setImageResource(R.drawable.urchin);
+                backgroundDescription.setText(R.string.urchin_description);
+                proceed.setEnabled(true);
+                selectedBackground = "Urchin";
+            }
+        }
+
         linearLayout.addView(acolyteButton);
         linearLayout.addView(charlatanButton);
         linearLayout.addView(criminalButton);
@@ -300,6 +384,7 @@ public class chooseBackground extends Activity {
     private class raceButtonListener implements View.OnClickListener {
         public void onClick(View v) {
             Intent intent = new Intent(context, chooseRace.class);
+            intent.putExtra("myCharacter", myCharacter);
             startActivity(intent);
         }
     }

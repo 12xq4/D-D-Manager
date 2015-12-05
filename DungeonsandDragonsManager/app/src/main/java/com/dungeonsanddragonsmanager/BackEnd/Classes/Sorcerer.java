@@ -35,7 +35,7 @@ public class Sorcerer extends Role{
     void setEquipments() {
         equipment.add("a light crossbow and 20 bolts or any simple weapon.");
         equipment.add("a component pouch or an arcane focus.");
-        equipment.add("a dungeoneer’s pack or an explorer’s pack.");
+        equipment.add("a dungeoneer's pack or an explorer's pack.");
         equipment.add("two daggers.");
     }
 }

@@ -23,9 +23,7 @@ public class Cleric extends Role {
     void setSkills() {
         skillset.add(new Skills("Armor and Weapon Proficiencies","Light armor, medium armor, shield, all simple weapons."));
         skillset.add(new Skills("Saving throw proficiencies","Wisdom, Charisma"));
-        skillset.add(new Skills("Spell casting", "You have the ability to cast spells."));
-        skillset.add(new Skills("Divine Domain", "Choose one domain related to your deity: Knowledge, Life, Light, Nature, Tempest, Trickery, or War." +
-                "Your choice grants you domain spells and other features."));
+
         skillset.add(new Skills("Bonus", "Choose two from History, Insight, Medicine, Persuasion, and Religion"));
 
     }

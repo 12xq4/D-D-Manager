@@ -29,6 +29,8 @@ public class chooseClass extends Activity {
 
     String selectedClass;
 
+    String savedClass;
+
     TextView chooseClassText;
 
     HorizontalScrollView hsr;
@@ -257,6 +259,82 @@ public class chooseClass extends Activity {
                 selectedClass = "Wizard";
             }
         });
+
+        if ( ! myCharacter[1].equals("") ) {
+            savedClass = myCharacter[1];
+            if (savedClass.equals("Barbarian")) {
+                classImage.setImageResource(R.drawable.barbarian);
+                classDescription.setText(R.string.barbarian_description);
+                proceed.setEnabled(true);
+                selectedClass = "Barbarian";
+            }
+            else if (savedClass.equals("Bard")) {
+                classImage.setImageResource(R.drawable.bard);
+                classDescription.setText(R.string.bard_description);
+                proceed.setEnabled(true);
+                selectedClass = "Bard";
+            }
+            else if (savedClass.equals("Cleric")) {
+                classImage.setImageResource(R.drawable.cleric);
+                classDescription.setText(R.string.cleric_description);
+                proceed.setEnabled(true);
+                selectedClass = "Cleric";
+            }
+            else if (savedClass.equals("Druid")) {
+                classImage.setImageResource(R.drawable.druid);
+                classDescription.setText(R.string.druid_description);
+                proceed.setEnabled(true);
+                selectedClass = "Druid";
+            }
+            else if (savedClass.equals("Fighter")) {
+                classImage.setImageResource(R.drawable.fighter);
+                classDescription.setText(R.string.fighter_description);
+                proceed.setEnabled(true);
+                selectedClass = "Fighter";
+            }
+            else if (savedClass.equals("Monk")) {
+                classImage.setImageResource(R.drawable.monk);
+                classDescription.setText(R.string.monk_description);
+                proceed.setEnabled(true);
+                selectedClass = "Monk";
+            }
+            else if (savedClass.equals("Paladin")) {
+                classImage.setImageResource(R.drawable.paladin);
+                classDescription.setText(R.string.paladin_description);
+                proceed.setEnabled(true);
+                selectedClass = "Paladin";
+            }
+            else if (savedClass.equals("Ranger")) {
+                classImage.setImageResource(R.drawable.ranger);
+                classDescription.setText(R.string.ranger_description);
+                proceed.setEnabled(true);
+                selectedClass = "Ranger";
+            }
+            else if (savedClass.equals("Rogue")) {
+                classImage.setImageResource(R.drawable.rogue);
+                classDescription.setText(R.string.rogue_description);
+                proceed.setEnabled(true);
+                selectedClass = "Rogue";
+            }
+            else if (savedClass.equals("Sorcerer")) {
+                classImage.setImageResource(R.drawable.sorcerer);
+                classDescription.setText(R.string.sorcerer_description);
+                proceed.setEnabled(true);
+                selectedClass = "Sorcerer";
+            }
+            else if (savedClass.equals("Warlock")) {
+                classImage.setImageResource(R.drawable.warlock);
+                classDescription.setText(R.string.warlock_description);
+                proceed.setEnabled(true);
+                selectedClass = "Warlock";
+            }
+            else if (savedClass.equals("Wizard")) {
+                classImage.setImageResource(R.drawable.wizard);
+                classDescription.setText(R.string.wizard_description);
+                proceed.setEnabled(true);
+                selectedClass = "Wizard";
+            }
+        }
 
         linearLayout.addView(barbarianButton);
         linearLayout.addView(bardButton);

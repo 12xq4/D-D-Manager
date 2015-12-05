@@ -20,7 +20,7 @@
         android:layout_below="@+id/yourCharacter"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textSize="50px"
+        android:textSize="35px"
         android:background="@drawable/border" />
 
     <LinearLayout
@@ -36,14 +36,14 @@
             android:layout_height="wrap_content"
             android:text="@string/race"
             android:id="@+id/raceHeader"
-            android:textSize="50px" />
+            android:textSize="35px" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="New Text"
             android:id="@+id/myRace"
-            android:textSize="50px"
+            android:textSize="35px"
             android:scrollbars = "vertical"/>
     </LinearLayout>
 
@@ -60,13 +60,13 @@
             android:layout_height="wrap_content"
             android:text="@string/myClass"
             android:id="@+id/classHeader"
-            android:textSize="50px" />
+            android:textSize="35px" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/myClass"
-            android:textSize="50px"
+            android:textSize="35px"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:scrollbars="vertical"
@@ -86,14 +86,14 @@
             android:layout_height="wrap_content"
             android:text="@string/background"
             android:id="@+id/backHeader"
-            android:textSize="50px" />
+            android:textSize="35px" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/background"
             android:id="@+id/myBackground"
-            android:textSize="50px"
+            android:textSize="35px"
             android:layout_below="@+id/backHeader"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
