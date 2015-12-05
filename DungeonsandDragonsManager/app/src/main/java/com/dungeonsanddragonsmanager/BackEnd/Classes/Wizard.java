@@ -35,7 +35,7 @@ public class Wizard extends Role {
     void setEquipments() {
         equipment.add("a quarterstaff or a dagger.");
         equipment.add("a component pouch or an arcane focus.");
-        equipment.add("a scholar’s pack or an explorer’s pack.");
+        equipment.add("a scholar's pack or an explorer's pack.");
         equipment.add("a spellbook.");
     }
 }
