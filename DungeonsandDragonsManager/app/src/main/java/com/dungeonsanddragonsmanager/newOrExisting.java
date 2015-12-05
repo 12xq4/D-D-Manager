@@ -32,6 +32,8 @@ public class newOrExisting extends Activity {
     String[] character = new String[3];
     String[] myCharacter = {"", "", ""};
 
+    boolean existing = true;
+
     FileInputStream fis;
 
     @Override
@@ -75,6 +77,7 @@ public class newOrExisting extends Activity {
             Intent intent = new Intent(context, finalizeCharacter.class);
             intent.putExtra("myCharacter", character);
             intent.putExtra("selectedStats", stat);
+            intent.putExtra("existing", existing);
             startActivity(intent);
         }
     }

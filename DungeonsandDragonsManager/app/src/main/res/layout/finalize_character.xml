@@ -145,12 +145,12 @@
         android:layout_toEndOf="@+id/statsButton"
         android:background="#0000"/>
 
-    <!-- <Button
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/go_play"
-        android:id="@+id/goPlay"
-        android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@+id/progressBar" /> -->
+        android:id="@+id/returnButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/backgroundInformation"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

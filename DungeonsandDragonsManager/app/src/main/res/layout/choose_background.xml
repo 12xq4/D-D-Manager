@@ -29,28 +29,44 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+
+
     <ImageView
         android:layout_width="450px"
         android:layout_height="650px"
         android:id="@+id/backgroundImage"
-        android:layout_alignTop="@+id/backgroundDescription"
-        android:layout_marginLeft="100px"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignTop="@+id/otherInformation"
+        android:layout_toLeftOf="@+id/backgroundProceed"
+        android:layout_toStartOf="@+id/backgroundProceed" />
 
     <TextView
         android:layout_width="450px"
         android:layout_height="650px"
-        android:text="@string/background_description"
-        android:id="@+id/backgroundDescription"
+        android:text="@string/other_Info"
+        android:id="@+id/otherInformation"
         android:textSize="50px"
         android:scrollbars = "vertical"
-        android:layout_marginTop="79dp"
-        android:layout_below="@+id/horizontalScrollView"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="100px"
         android:paddingLeft="10px"
         android:paddingRight="10px"
-        android:background="@drawable/border"/>
+        android:background="@drawable/border"
+        android:layout_above="@+id/backgroundDescription"
+        android:layout_toRightOf="@+id/backgroundProceed"
+        android:layout_toEndOf="@+id/backgroundProceed"
+        android:layout_marginBottom="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="350px"
+        android:text="@string/background_description"
+        android:id="@+id/backgroundDescription"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:background="@drawable/border"
+        android:layout_above="@+id/backgroundProceed"
+        android:layout_alignLeft="@+id/backgroundImage"
+        android:layout_alignStart="@+id/backgroundImage"
+        android:layout_alignRight="@+id/otherInformation"
+        android:layout_alignEnd="@+id/otherInformation" />
 
     <Button
         android:layout_width="wrap_content"
@@ -58,9 +74,11 @@
         android:text="@string/proceed"
         android:id="@+id/backgroundProceed"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80px"
+        android:layout_marginBottom="80dp"
+        android:enabled="false"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="195dp" />
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -105,5 +123,6 @@
         android:layout_toRightOf="@+id/statsButton"
         android:layout_toEndOf="@+id/statsButton"
         android:background="#0000"/>
+
 
 </RelativeLayout>

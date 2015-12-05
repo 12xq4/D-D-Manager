@@ -411,6 +411,7 @@ public class chooseStats extends Activity {
         public void onClick(View v) {
             Intent intent = new Intent(context, chooseBackground.class);
             intent.putExtra("myCharacter", myCharacter);
+            intent.putExtra("existing", false);
             startActivity(intent);
         }
     };

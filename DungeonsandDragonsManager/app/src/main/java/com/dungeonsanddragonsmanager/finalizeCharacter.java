@@ -36,6 +36,9 @@ import com.dungeonsanddragonsmanager.BackEnd.Classes.Monk;
 import com.dungeonsanddragonsmanager.BackEnd.Classes.Paladin;
 import com.dungeonsanddragonsmanager.BackEnd.Classes.Ranger;
 import com.dungeonsanddragonsmanager.BackEnd.Classes.Rogue;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Sorcerer;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Warlock;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Wizard;
 import com.dungeonsanddragonsmanager.BackEnd.Races.Dragonborn;
 import com.dungeonsanddragonsmanager.BackEnd.Races.Dwarf;
 import com.dungeonsanddragonsmanager.BackEnd.Races.Elf;
@@ -85,7 +88,9 @@ public class finalizeCharacter extends Activity {
     Role playerRole;
     Background playerBackground;
 
-    Button play;
+    boolean existing;
+
+    Button returnButton;
 
     ImageButton raceButton, classButton, bgButton, statsButton, fCharButton;
 
@@ -101,6 +106,7 @@ public class finalizeCharacter extends Activity {
 
         myCharacter = (String[]) bundle.get("myCharacter");
         chosenStats = (String[]) bundle.get("selectedStats");
+        existing = (boolean) bundle.getBoolean("existing");
 
         File file = new File(context.getFilesDir(), SAVE);
         writeToSave(myCharacter, chosenStats, file);
@@ -125,24 +131,35 @@ public class finalizeCharacter extends Activity {
         chosenBackground = (TextView) findViewById(R.id.myBackground);
         chosenBackground.setMovementMethod(new ScrollingMovementMethod());
 
-        raceButton = (ImageButton) findViewById(R.id.raceButton);
-        raceButton.setImageResource(R.drawable.green_circle);
-        raceButton.setOnClickListener(new raceButtonListener());
+        if ( ! existing ) {
+            raceButton = (ImageButton) findViewById(R.id.raceButton);
+            raceButton.setImageResource(R.drawable.green_circle);
+            raceButton.setOnClickListener(new raceButtonListener());
 
-        classButton = (ImageButton) findViewById(R.id.classButton);
-        classButton.setImageResource(R.drawable.green_circle);
-        classButton.setOnClickListener(new classButtonListener());
+            classButton = (ImageButton) findViewById(R.id.classButton);
+            classButton.setImageResource(R.drawable.green_circle);
+            classButton.setOnClickListener(new classButtonListener());
 
-        bgButton = (ImageButton) findViewById(R.id.backgroundButton);
-        bgButton.setImageResource(R.drawable.green_circle);
-        bgButton.setOnClickListener(new bgButtonListener());
+            bgButton = (ImageButton) findViewById(R.id.backgroundButton);
+            bgButton.setImageResource(R.drawable.green_circle);
+            bgButton.setOnClickListener(new bgButtonListener());
 
-        statsButton = (ImageButton) findViewById(R.id.statsButton);
-        statsButton.setImageResource(R.drawable.green_circle);
-        statsButton.setOnClickListener(new statsButtonListener());
+            statsButton = (ImageButton) findViewById(R.id.statsButton);
+            statsButton.setImageResource(R.drawable.green_circle);
+            statsButton.setOnClickListener(new statsButtonListener());
 
-        fCharButton = (ImageButton) findViewById(R.id.finalCharacterButton);
-        fCharButton.setImageResource(R.drawable.blue_circle);
+            fCharButton = (ImageButton) findViewById(R.id.finalCharacterButton);
+            fCharButton.setImageResource(R.drawable.blue_circle);
+
+            returnButton = (Button) findViewById(R.id.returnButton);
+            returnButton.setText("DONE!");
+            returnButton.setOnClickListener(new returnButtonListener());
+        }
+        else {
+            returnButton = (Button) findViewById(R.id.returnButton);
+            returnButton.setText("BACK");
+            returnButton.setOnClickListener(new returnButtonListener());
+        }
 
         // Instantiate Race Object
         if ( myCharacter[0].equals("Dwarf")) {
@@ -235,6 +252,21 @@ public class finalizeCharacter extends Activity {
         else if ( myCharacter[1].equals("Rogue")) {
             playerRole = new Rogue(playerStat);
             classHeader.setText("Class: Rogue");
+            chosenClass.setText(playerRole.toString());
+        }
+        else if ( myCharacter[1].equals("Sorcerer")) {
+            playerRole = new Sorcerer(playerStat);
+            classHeader.setText("Class: Sorcerer");
+            chosenClass.setText(playerRole.toString());
+        }
+        else if ( myCharacter[1].equals("Warlock")) {
+            playerRole = new Warlock(playerStat);
+            classHeader.setText("Class: Warlock");
+            chosenClass.setText(playerRole.toString());
+        }
+        else if ( myCharacter[1].equals("Wizard")) {
+            playerRole = new Wizard(playerStat);
+            classHeader.setText("Class: Wizard");
             chosenClass.setText(playerRole.toString());
         }
 
@@ -345,6 +377,13 @@ public class finalizeCharacter extends Activity {
         public void onClick(View v) {
             Intent intent = new Intent(context, chooseStats.class);
             intent.putExtra("myCharacter", myCharacter);
+            startActivity(intent);
+        }
+    };
+
+    private class returnButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, newOrExisting.class);
             startActivity(intent);
         }
     };

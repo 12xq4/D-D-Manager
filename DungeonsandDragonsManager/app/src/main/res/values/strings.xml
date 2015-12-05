@@ -31,14 +31,118 @@
         fate that can befall a dwarf.  Dwarves who take up the adventuring life might be motivated
         by a desire for treasure, or the command or inspiration of a deity.  A dwarf might also seek
         to restore a clan\'s lost honor, or avenge an ancient wrong the clan suffered.</string>
-    <string name="elf_description">The Elf is a...</string>
-    <string name="halfling_description">The Halfling is a...</string>
-    <string name="human_description">The Human is a...</string>
-    <string name="dragonborn_description">The Dragonborn is a...</string>
-    <string name="gnome_description">The Gnome is a...</string>
-    <string name="half_elf_description">The Half-Elf is a...</string>
-    <string name="half_orc_description">The Half-Orc is a...</string>
-    <string name="tiefling_description">The Tiefling is a...</string>
+    <string name="elf_description">Elves are a magical people of otherworldly grace, living in the
+        world but not entirely part of it. They live in places of ethereal beauty, in the midst of
+        ancient forests or in silvery spires glittering with faerie light, where soft music drifts
+        through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art
+        and artistry, music and poetry, and the good things of the world.</string>
+    <string name="halfling_description">The comfort of home are the goals of most halflings’
+        lives: a place to settle in peace and quiet, far from marauding monsters and clashing
+        armies; a blazing fire and a generous meal; fine drink and fine conversation. Though some
+        halflings live out their days in remote agricultural communities, others form nomadic bands
+        that travel constantly, lured by the open road and the wide horizon to discover the wonders
+        of new lands and peoples. But even these wanderers love peace, food, hearth, and home,
+        though home might be a wagon jostling along a dirt road or a raft floating downriver.</string>
+    <string name="human_description">In the reckonings of most worlds, humans are the youngest of
+        the common races, late to arrive on the world scene and short-lived in comparison to
+        dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive
+        to achieve as much as they can in the years they are given. Or maybe they feel they have
+        something to prove to the elder races, and that’s why they build their mighty empires on
+        the foundation of conquest and trade. Whatever drives them, humans are the innovators,
+        the achievers, and the pioneers of the worlds.</string>
+    <string name="dragonborn_description">Born of dragons, as their name proclaims, the dragonborn
+        walk proudly through a world that greets them with fearful incomprehension. Shaped by
+        draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs
+        as a unique race, combining the best attributes of dragons and humanoids. Som e dragonborn
+        are faithful servants to true dragons, others form the ranks of soldiers in great wars,
+        and still others find themselves adrift, with no clear calling in life.</string>
+    <string name="gnome_description">A constant hum of busy activity pervades the warrens and
+        neighborhoods where gnomes form their close- knit communities. Louder sounds punctuate
+        the hum: a crunch of grinding gears here, a minor explosion there, a yelp of surprise
+        or triumph, and especially bursts of laughter. Gnomes take delight in life, enjoying
+        every moment of invention, exploration, investigation, creation, and play.</string>
+    <string name="half_elf_description">Walking in two worlds but truly belonging to neither,
+        half-elves combine what some say are the best qualities of their elf and human parents:
+        human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature,
+        and artistic tastes of the elves. Some half-elves live among humans, set apart by their
+        emotional and physical differences, watching friends and loved ones age while time barely
+        touches them. Others live with the elves, growing restless as they reach adulthood in the
+        timeless elven realms, while their peers continue to live as children. Many half-elves,
+        unable to fit into either society, choose lives of solitary wandering or join with other
+        misfits and outcasts in the adventuring life.</string>
+    <string name="half_orc_description">Whether united under the leadership of a mighty warlock or
+        having fought to a standstill after years of conflict, orc and human tribes sometimes form
+        alliances, joining forces into a larger horde to the terror of civilized lands nearby. When
+        these alliances are sealed by marriages, half-orcs are born. Some half-orcs rise to become
+        proud chiefs of orc tribes, their human blood giving them an edge over their full-blooded
+        orc rivals. Some venture into the world to prove their worth among humans and other more
+        civilized races. Many of these become adventurers, achieving greatness for their mighty
+        deeds and notoriety for their barbaric customs and savage fury.</string>
+    <string name="tiefling_description">To be greeted with stares and whispers, to suffer violence
+        and insult on the street, to see mistrust and fear in every eye: this is the lot of the
+        tiefling. And to twist the knife, tieflings know that this is because a pact struck
+        generations ago infused the essence of Asmodeus—overlord of the Nine Hells—into their
+        bloodline. Their appearance and their nature are not their fault but the result of an
+        ancient sin, for which they and their children and their children’s children will always
+        be held accountable.</string>
+
+    <!-- Classes Descriptions-->
+    <string name="barbarian_description">Barbarians are defined by their rage: unbridled, unquenchable, and
+        unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered
+        predator, the unrelenting assault of a storm, the churning turmoil of the sea. For some,
+        their rage springs from a communion with fierce animal spirits. Others draw from a roiling
+        reservoir of anger at a world full of pain. For every barbarian, rage is a power that
+        fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of
+        strength.</string>
+    <string name="bard_description">Whether scholar, skald, or scoundrel, a bard weaves magic through words and
+        music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal
+        wounds.</string>
+    <string name="cleric_description">Clerics are intermediaries between the mortal world and the distant
+        planes of the gods. As varied as the gods they serve, clerics strive to embody the
+        handiwork of their deities. No ordinary priest, a cleric is imbued with divine
+        magic.</string>
+    <string name="druid_description">Whether calling on the elemental forces of nature or emulating the
+        creatures of the animal world, druids are an embodiment of nature’s resilience, cunning,
+        and fury. They claim no mastery over nature. Instead, they see themselves as extensions
+        of nature’s indomitable will.</string>
+    <string name="fighter_description">Fighters are perhaps the most diverse class of characters in the worlds
+        of Dungeon and Dragons. Questing knights, conquering overlords, royal champions, elite foot
+        soldiers, hardened mercenaries, and bandit kings—as fighters, they all share an
+        unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of
+        combat. And they are well acquainted with death, both meting it out and staring it
+        defiantly in the face.</string>
+    <string name="monk_description">Monks are united in their ability to magically harness the energy that
+        flows in their bodies. Whether channeled as a striking display of combat prowess or a
+        subtler focus of defensive ability and speed, this energy infuses all that a monk
+        does.</string>
+    <string name="paladin_description">Paladins are united by their oaths to stand against the forces of evil.
+        Whether sworn before a god’s altar and the witness of a priest, in a sacred glade before
+        nature spirits and fey beings, or in a moment of desperation and grief with the dead as
+        the only witness, a paladin’s oath is a powerful bond. It is a source of power that turns a
+        devout warrior into a blessed champion.</string>
+    <string name="ranger_description">Far from the bustle of cities and towns, past the hedges that shelter
+        the most distant farms from the terrors of the wild, amid the dense-packed trees of
+        trackless forests and across wide and empty plains, rangers keep their unending
+        watch.</string>
+    <string name="rogue_description">Rogues rely on skill, stealth, and their foes’ vulnerabilities to get the
+        upper hand in any situation. They have a knack for finding the solution to just about any
+        problem, demonstrating a resourcefulness and versatility that is the cornerstone of any
+        successful adventuring party.</string>
+    <string name="sorcerer_description">Sorcerers carry a magical birthright conferred upon them by an exotic
+        bloodline, some otherworldly influence, or exposure to unknown cosmic forces. One can’t
+        study sorcery as one learns a language, any more than one can learn to live a legendary
+        life. No one chooses sorcery; the power chooses the sorcerer.</string>
+    <string name="warlock_description">Warlocks are seekers of the knowledge that lies hidden in the fabric
+        of the multiverse. Through pacts made with mysterious beings of supernatural power,
+        warlocks unlock magical effects both subtle and spectacular. Drawing on the ancient
+        knowledge of beings such as fey nobles, demons, devils, hags, and alien entities of the
+        Far Realm, warlocks piece together arcane secrets to bolster their own power.</string>
+    <string name="wizard_description">Wizards are supreme magic-users, defined and united as a class by the
+        spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards
+        cast spells of explosive fire, arcing lightning, subtle deception, and brute-force mind
+        control. Their magic conjures monsters from other planes of existence, glimpses the future,
+        or turns slain foes into zombies. Their mightiest spells change one substance into another,
+        call meteors down from the sky, or open portals to other worlds.</string>
 
     <!-- Classes -->
     <string name="barbarian">Barbarian</string>
@@ -54,26 +158,12 @@
     <string name="warlock">Warlock</string>
     <string name="wizard">Wizard</string>
 
-    <!-- Class Description-->
-    <string name="barbarian_description">Barbarian description</string>
-    <string name="bard_description">Bard description</string>
-    <string name="cleric_description">Cleric description</string>
-    <string name="druid_description">Druid description</string>
-    <string name="fighter_description">Fighter description</string>
-    <string name="monk_description">Monk description</string>
-    <string name="paladin_description">Paladin description</string>
-    <string name="ranger_description">Ranger description</string>
-    <string name="rogue_description">Rogue description</string>
-    <string name="sorcerer_description">Sorcerer description</string>
-    <string name="warlock_description">Warlock description</string>
-    <string name="wizard_description">Wizard description</string>
-
     <string name="background_menu">Background Menu</string>
     <string name="stats">Drag and Drop the Numbers on the Icons to set the Stats</string>
 
     <string name="new_or_existing_player">New or Existing Player</string>
     <string name="your_character">Your Character</string>
-    <string name="go_play">Go Play!</string>
+    <string name="done">DONE!</string>
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="raceDescription">Description of Race</string>
@@ -106,28 +196,95 @@
     <string name="urchin">Urchin</string>
 
     <!-- Background Descriptions -->
-    <string name="acolyte_description">Acolyte description</string>
-    <string name="charlatan_description">Charlatan description</string>
-    <string name="criminal_description">Criminal description</string>
-    <string name="entertainer_description">Entertainer description</string>
-    <string name="folk_hero_description">Folk Hero description</string>
-    <string name="guild_artisan_description">Guild Artisan description</string>
-    <string name="hermit_description">Hermit description</string>
-    <string name="noble_description">Noble description</string>
-    <string name="outlander_description">Outlander description</string>
-    <string name="sage_description">Sage description</string>
-    <string name="sailor_description">Sailor description</string>
-    <string name="soldier_description">Soldier description</string>
-    <string name="urchin_description">Urchin description</string>
+    <string name="acolyte_description">You have spent your life in the service of a temple to a
+        specific god or pantheon of gods. You act as an intermediary between the land of the holy
+        and the mortal world. Choose a god and work with your game host to determine the nature
+        of your service to that god.</string>
+    <string name="charlatan_description">You have always had a way with people. You know what makes
+        them tick, you can tease out their hearts\' desires after a few minutes of conversation,
+        and with a few leading questions you can read them like they were children\'s books. You know
+        what people want and you deliver, or rather, you promise to deliver.The bottle of
+        pink-colored liquid will surely cure that unseemly rash, this ointment—nothing more than a
+        bit of fat with a sprinkle of silver dust—can restore youth and vigor, and there’s a bridge
+        in the city that just happens to be for sale.
+    </string>
+    <string name="criminal_description">You are an experienced criminal with a history of breaking
+        the law. You have spent a lot of time among other criminals and still have contacts within
+        the criminal underworld. You’re far closer than most people to the world of murder, theft,
+        and violence that pervades the underbelly of civilization, and you have survived up to
+        this point by flouting the rules and regulations of society.
+    </string>
+    <string name="entertainer_description">You thrive in front of an audience. You know how to
+        entrance them, entertain them, and even inspire them. Your poetics can stir the hearts of
+        those who hear you, awakening grief or joy, laughter or anger. Your music raises their
+        spirits or captures their sorrow. Your dance steps captivate, your humor cuts to the
+        quick. Whatever techniques you use, your art is your life.
+    </string>
+    <string name="folk_hero_description">You come from a humble social rank, but you are destined
+        for so much more. Already the people of your home village regard you as their champion, and
+        your destiny calls you to stand against the tyrants and monsters that threaten the common
+        folk everywhere.
+    </string>
+    <string name="guild_artisan_description">You are a member of an artisan’s guild, skilled in a
+        particular field and closely associated with other artisans. You are a well-established part
+        of the mercantile world, freed by talent and wealth from the constraints of a feudal social
+        order. You learned your skills as an apprentice to a master artisan, under the sponsorship
+        of your guild, until you became a master in your own right.
+    </string>
+    <string name="hermit_description">You lived in seclusion—either in a sheltered community such
+        as a monastery, or entirely a lone—for a formative part of your life. In your time apart
+        from the clamor of society, you found quiet, solitude, and perhaps some of the answers
+        you were looking for.
+    </string>
+    <string name="noble_description">You understand wealth, power, and privilege. You carry a noble
+        title, and your family owns land, collects taxes, and wields significant political
+        influence. Work with your game host to come up with an appropriate title and determine how
+        much authority that title carries. A noble title doesn’t stand on its own—it’s connected to
+        an entire family, and whatever title you hold, you will pass it down to your own children.
+        Not only do you need to determine your noble title, but you should also work with the
+        game host to describe your family and their influence on you.
+    </string>
+    <string name="outlander_description">You grew up in the wilds, far from civilization and the
+        comforts of town and technology. You’ve witnessed the migration of herds larger than
+        forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed
+        the solitude of being the only thinking creature for miles in any direction. The wilds are
+        in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even
+        a marauder. Even in places where you don’t know the specific features of the terrain, you
+        know the ways of the wild.
+    </string>
+    <string name="sage_description">You spent years learning the lore of the multiverse. You
+        scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects
+        that interest you. Your efforts have made you a master in your fields of study.
+    </string>
+    <string name="sailor_description">You sailed on a seagoing vessel for years. In that time, you
+        faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to
+        the bottomless depths. Your first love is the distant line of the horizon, but the time
+        has come to try your hand at something new. Discuss with your game host the nature of the
+        ship, how famous it was, whether it\'s still sailing, and your duties on it.
+    </string>
+    <string name="soldier_description">War has been your life for as long as you care to remember.
+        You might have been part of a standing national army or a mercenary company, or perhaps a
+        member of a local militia who rose to prominence during a recent war. Work with your
+        game host to determine which military organization you were a part of, how far through
+        its ranks you progressed, and what kind of experiences you had during your military
+        career.</string>
+    <string name="urchin_description">You grew up on the streets alone, orphaned, and poor. You had
+        no one to watch over you or provide for you, so you learned to provide for yourself. You
+        fought fiercely over food and kept a constant watch or others who might try to steal from
+        you. You slept on rooftops and in alleyways, exposed to the elements.  You begin your
+        adventuring career with enough money to live modestly and securely for at least ten days.
+        How did you come by that money? What allowed you to break free of your desperate
+        circumstances and embark on a better life?</string>
 
     <string name="zero">0</string>
     <string name="background">Background:</string>
-    <string name="background_description">Background description</string>
+    <string name="background_description">Description of Background</string>
     <string name="d">D</string>
     <string name="ampersand"><![CDATA[&]]></string>
     <string name="manager">Manager</string>
     <string name="dnd"><![CDATA[D&D]]></string>
     <string name="attributes">Attributes</string>
     <string name="skills">Skills:</string>
+    <string name="other_Info">Other Information</string>
 
 </resources>
