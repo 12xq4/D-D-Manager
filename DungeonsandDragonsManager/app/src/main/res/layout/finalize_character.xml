@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="400px"
         android:layout_below="@+id/raceInformation"
-        android:background="@drawable/border"
+
         android:id="@+id/classInformation">
 
         <TextView
@@ -77,7 +77,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="400px"
-        android:background="@drawable/border"
+
         android:layout_below="@+id/classInformation"
         android:id="@+id/backgroundInformation">
 
