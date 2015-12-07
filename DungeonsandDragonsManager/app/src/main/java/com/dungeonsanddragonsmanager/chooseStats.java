@@ -9,6 +9,9 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.DragEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnDragListener;
@@ -33,6 +36,8 @@ public class chooseStats extends Activity {
 
     String[] myCharacter = new String[3];
 
+    int statsSelected = 0;
+
     TextView chooseStatsText;
 
     TextView point1, point2, point3, point4, point5, point6;
@@ -43,7 +48,7 @@ public class chooseStats extends Activity {
 
     String[] selectedStats = new String[6];
 
-    Button proceed;
+    Button proceed, reset;
 
     ImageButton raceButton, classButton, bgButton, statsButton, fCharButton;
 
@@ -59,7 +64,11 @@ public class chooseStats extends Activity {
 
         chooseStatsText = (TextView) findViewById(R.id.chooseStatsText);
 
+        reset = (Button) findViewById(R.id.resetButton);
+        reset.setOnClickListener(new resetButtonListener());
+
         proceed = (Button) findViewById(R.id.statsProceedButton);
+        proceed.setEnabled(false);
         proceed.setOnClickListener(new proceedButtonListener());
 
         raceButton = (ImageButton) findViewById(R.id.raceButton);
@@ -107,7 +116,6 @@ public class chooseStats extends Activity {
 
         strengthVal = (TextView) findViewById(R.id.strengthValue);
         strengthVal.setOnDragListener(new MyDragStrengthListener());
-        //strengthVal.setOnTouchListener(new MyTouchStrengthListener());
 
         conVal = (TextView) findViewById(R.id.conValue);
         conVal.setOnDragListener(new MyDragConListener());
@@ -118,10 +126,10 @@ public class chooseStats extends Activity {
         intVal = (TextView) findViewById(R.id.intValue);
         intVal.setOnDragListener(new MyDragIntListener());
 
-        charismaVal = (TextView) findViewById(R.id.charismaValue);
+        charismaVal = (TextView) findViewById(R.id.charValue);
         charismaVal.setOnDragListener(new MyDragCharismaListener());
 
-        wisdomVal = (TextView) findViewById(R.id.wisdomValue);
+        wisdomVal = (TextView) findViewById(R.id.wisValue);
         wisdomVal.setOnDragListener(new MyDragWisdomListener());
 
     }
@@ -215,24 +223,6 @@ public class chooseStats extends Activity {
         }
     };
 
-    /*private final class MyTouchStrengthListener implements View.OnTouchListener {
-        public boolean onTouch(View view, MotionEvent motionEvent) {
-            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                ClipData data = ClipData.newPlainText("", "");
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
-                view.startDrag(data, shadowBuilder, view, 0);
-                view.setVisibility(View.VISIBLE);
-                strengthVal.setText(R.string.one);
-                point1.setX(currentx);
-                point1.setY(currenty);
-                point1.setText(R.string.one);
-                return true;
-            } else {
-                return false;
-            }
-        }
-    };*/
-
     private class MyDragStrengthListener implements OnDragListener {
         @Override
         public boolean onDrag(View v, DragEvent event) {
@@ -245,6 +235,10 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
                 case DragEvent.ACTION_DROP:
+                    statsSelected++;
+                    if ( statsSelected == 6 ) {
+                        proceed.setEnabled(true);
+                    }
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
                     strengthVal.setText(selected + "");
@@ -269,6 +263,10 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
                 case DragEvent.ACTION_DROP:
+                    statsSelected++;
+                    if ( statsSelected == 6 ) {
+                        proceed.setEnabled(true);
+                    }
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
                     conVal.setText(selected + "");
@@ -293,6 +291,10 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
                 case DragEvent.ACTION_DROP:
+                    statsSelected++;
+                    if ( statsSelected == 6 ) {
+                        proceed.setEnabled(true);
+                    }
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
                     dexVal.setText(selected + "");
@@ -317,6 +319,10 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
                 case DragEvent.ACTION_DROP:
+                    statsSelected++;
+                    if ( statsSelected == 6 ) {
+                        proceed.setEnabled(true);
+                    }
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
                     intVal.setText(selected + "");
@@ -341,6 +347,10 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
                 case DragEvent.ACTION_DROP:
+                    statsSelected++;
+                    if ( statsSelected == 6 ) {
+                        proceed.setEnabled(true);
+                    }
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
                     charismaVal.setText(selected + "");
@@ -365,6 +375,10 @@ public class chooseStats extends Activity {
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
                 case DragEvent.ACTION_DROP:
+                    statsSelected++;
+                    if ( statsSelected == 6 ) {
+                        proceed.setEnabled(true);
+                    }
                     View view = (View) event.getLocalState();
                     view.setVisibility(View.INVISIBLE);
                     wisdomVal.setText(selected + "");
@@ -388,6 +402,15 @@ public class chooseStats extends Activity {
             Intent intent = new Intent(context, finalizeCharacter.class);
             intent.putExtra("myCharacter", myCharacter);
             intent.putExtra("selectedStats", selectedStats);
+            startActivity(intent);
+        }
+    };
+
+    private class resetButtonListener implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(context, chooseStats.class);
+            intent.putExtra("myCharacter", myCharacter);
+            finish();
             startActivity(intent);
         }
     };
@@ -419,6 +442,28 @@ public class chooseStats extends Activity {
     public void onBackPressed() {
 
         super.onBackPressed();
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_help:
+                showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+    private void showHelp(){
+        Intent intent = new Intent(context, helpScreen.class);
+        intent.putExtra("Flag", helpScreen.STAT_HELP);
+        startActivity(intent);
     }
 
 }

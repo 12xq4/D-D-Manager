@@ -37,9 +37,9 @@ public abstract class Role {
     abstract void setSkills();
 
     String displayEquipments() {
-        String result = "Equipments: ";
+        String result = "Equipments: \n";
         for (String equi: equipment){
-            result += "            " +equi + "\n";
+            result += equi + "\n";
         }
         return result;
     }
@@ -47,7 +47,7 @@ public abstract class Role {
     abstract void setEquipments();
 
     public String toString(){
-        return "Hitpoints:    " + hitPoint + "\nAttack:    " + hitDice + "\n"
-                + displaySkills() + displayEquipments();
+        return "Hitpoints:    " + hitPoint + "\nAttack:    " + hitDice + "\n\n"
+                + displaySkills() + "\n" + displayEquipments();
     }
 }

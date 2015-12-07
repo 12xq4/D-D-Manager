@@ -279,12 +279,45 @@
     <string name="zero">0</string>
     <string name="background">Background:</string>
     <string name="background_description">Description of Background</string>
-    <string name="d">D</string>
-    <string name="ampersand"><![CDATA[&]]></string>
-    <string name="manager">Manager</string>
-    <string name="dnd"><![CDATA[D&D]]></string>
+
     <string name="attributes">Attributes</string>
     <string name="skills">Skills:</string>
-    <string name="other_Info">Other Information</string>
+    <string name="other_Info">Character Bonus</string>
+    <string name="Help">Help</string>
+    <string name="reset">Reset</string>
+
+    <!-- Help Information !-->
+    <string name="raceTitle">How to select your race?</string>
+    <string name="menuRaceDescription">You can slide through the horizontal scroll bar to view all
+        options click on one option to select it. You could slide up and down and the description
+        session to read more about a particular choice, and when you made up your mind, click
+        proceed.\nYour choice of race affects many different aspects of your character. It
+        establishes fundamental qualities that exist throughout your character\'s adventuring
+        career. When making this decision, keep in mind the kind of character you want to play.
+        For example, a halfling could be a good choice for a sneaky rogue, a dwarf makes a tough
+        warrior, and an elf can be a master of arcane magic. \n</string>
+    <string name="classTitle">How to select your class?</string>
+    <string name="menuClassDescription">You can slide through the horizontal scroll bar to view all
+        options, click on one option to select it. You could slide up and down and the description
+        session to read more about a particular choice, and when you made up your mind, click
+        proceed.\nClass is the primary definition of what your character can do. It\'s more than a
+        profession; it\'s your character\'s calling. Class shapes the way you think about the world
+        and interact with it and your relationship with other people and powers in the multiverse.
+        Your class gives you a variety of special features, such as a fighter\'s mastery of weapons
+        and armor, and a wizard\'s spells.\n</string>
+    <string name="bgTitle">How to select your Background?</string>
+    <string name="menuBGDescription">You can slide through the horizontal scroll bar to view all
+        options, click on one option to select it. You could slide up and down and the description
+        session to read more about a particular choice, and when you made up your mind, click
+        proceed.\nEvery story has a beginning. Your character\'s background reveals where you came
+        from, how you became an adventurer, and your place in the world. Choosing a background
+        provides you with important story cues about your character\'s identity.\n</string>
+    <string name="statTitle">How to select your Stats?</string>
+    <string name="menuStatDescription">Strength: A measure of your character\'s physical strength.\n
+        Constitution: How sturdy your character is.  This often comes into play when determining hit
+        points, or resisting special types of damage\nDexterity: Determines your character\'s hand-eye
+        coordination, and how agile they are. \nIntelligence: Determines how well your character
+        learns and reasons. \nCharisma: Measures your character\'s persuasiveness, and force of
+        personality.\nWisdom: Measures your character\'s willpower and common sense.</string>
 
 </resources>

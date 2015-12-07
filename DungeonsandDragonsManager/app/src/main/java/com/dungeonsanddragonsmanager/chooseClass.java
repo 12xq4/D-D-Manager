@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.graphics.drawable.AnimatedVectorDrawable;
+// import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
@@ -16,6 +19,20 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.View;
+
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Barbarian;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Bard;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Cleric;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Druid;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Fighter;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Monk;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Paladin;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Ranger;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Rogue;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Sorcerer;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Warlock;
+import com.dungeonsanddragonsmanager.BackEnd.Classes.Wizard;
+import com.dungeonsanddragonsmanager.BackEnd.Stat;
 
 
 /**
@@ -40,6 +57,7 @@ public class chooseClass extends Activity {
     ImageView classImage;
 
     TextView classDescription;
+    TextView otherDescription;
 
     Button proceed;
 
@@ -62,6 +80,8 @@ public class chooseClass extends Activity {
 
         classDescription = (TextView) findViewById(R.id.classDescription);
         classDescription.setMovementMethod(new ScrollingMovementMethod());
+        otherDescription = (TextView) findViewById(R.id.otherInformation);
+        otherDescription.setMovementMethod(new ScrollingMovementMethod());
 
         hsr = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
 
@@ -98,7 +118,11 @@ public class chooseClass extends Activity {
             public void onClick(View v) {
                 int scrollX = (barbarianButton.getLeft() - (width / 2)) + (barbarianButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.barbarian_description);
+                Barbarian temp = new Barbarian(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 classImage.setImageResource(R.drawable.barbarian);
                 proceed.setEnabled(true);
                 selectedClass = "Barbarian";
@@ -113,7 +137,11 @@ public class chooseClass extends Activity {
                 int scrollX = (bardButton.getLeft() - (width / 2)) + (bardButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.bard);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.bard_description);
+                Bard temp = new Bard(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Bard";
             }
@@ -127,7 +155,11 @@ public class chooseClass extends Activity {
                 int scrollX = (clericButton.getLeft() - (width / 2)) + (clericButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.cleric);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.cleric_description);
+                Cleric temp = new Cleric(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Cleric";
             }
@@ -141,7 +173,11 @@ public class chooseClass extends Activity {
                 int scrollX = (druidButton.getLeft() - (width / 2)) + (druidButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.druid);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.druid_description);
+                Druid temp = new Druid(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Druid";
             }
@@ -155,7 +191,11 @@ public class chooseClass extends Activity {
                 int scrollX = (fighterButton.getLeft() - (width / 2)) + (fighterButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.fighter);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.fighter_description);
+                Fighter temp = new Fighter(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Fighter";
             }
@@ -169,7 +209,11 @@ public class chooseClass extends Activity {
                 int scrollX = (monkButton.getLeft() - (width / 2)) + (monkButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.monk);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.monk_description);
+                Monk temp = new Monk(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Monk";
             }
@@ -183,7 +227,11 @@ public class chooseClass extends Activity {
                 int scrollX = (paladinButton.getLeft() - (width / 2)) + (paladinButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.paladin);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.paladin_description);
+                Paladin temp = new Paladin(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Paladin";
             }
@@ -197,7 +245,11 @@ public class chooseClass extends Activity {
                 int scrollX = (rangerButton.getLeft() - (width / 2)) + (rangerButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.ranger);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.ranger_description);
+                Ranger temp = new Ranger(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Ranger";
 
@@ -212,7 +264,11 @@ public class chooseClass extends Activity {
                 int scrollX = (rogueButton.getLeft() - (width / 2)) + (rogueButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.rogue);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.rogue_description);
+                Rogue temp = new Rogue(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Rogue";
             }
@@ -226,7 +282,11 @@ public class chooseClass extends Activity {
                 int scrollX = (sorcererButton.getLeft() - (width / 2)) + (sorcererButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.sorcerer);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.sorcerer_description);
+                Sorcerer temp = new Sorcerer(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Sorcerer";
             }
@@ -240,7 +300,11 @@ public class chooseClass extends Activity {
                 int scrollX = (warlockButton.getLeft() - (width / 2)) + (warlockButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.warlock);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.warlock_description);
+                Warlock temp = new Warlock(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Warlock";
             }
@@ -254,7 +318,11 @@ public class chooseClass extends Activity {
                 int scrollX = (wizardButton.getLeft() - (width / 2)) + (wizardButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 classImage.setImageResource(R.drawable.wizard);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.wizard_description);
+                Wizard temp = new Wizard(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Wizard";
             }
@@ -264,73 +332,121 @@ public class chooseClass extends Activity {
             savedClass = myCharacter[1];
             if (savedClass.equals("Barbarian")) {
                 classImage.setImageResource(R.drawable.barbarian);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.barbarian_description);
+                Barbarian temp = new Barbarian(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Barbarian";
             }
             else if (savedClass.equals("Bard")) {
                 classImage.setImageResource(R.drawable.bard);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.bard_description);
+                Bard temp = new Bard(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Bard";
             }
             else if (savedClass.equals("Cleric")) {
                 classImage.setImageResource(R.drawable.cleric);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.cleric_description);
+                Cleric temp = new Cleric(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Cleric";
             }
             else if (savedClass.equals("Druid")) {
                 classImage.setImageResource(R.drawable.druid);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.druid_description);
+                Druid temp = new Druid(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Druid";
             }
             else if (savedClass.equals("Fighter")) {
                 classImage.setImageResource(R.drawable.fighter);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.fighter_description);
+                Fighter temp = new Fighter(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Fighter";
             }
             else if (savedClass.equals("Monk")) {
                 classImage.setImageResource(R.drawable.monk);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.monk_description);
+                Monk temp = new Monk(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Monk";
             }
             else if (savedClass.equals("Paladin")) {
                 classImage.setImageResource(R.drawable.paladin);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.paladin_description);
+                Paladin temp = new Paladin(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Paladin";
             }
             else if (savedClass.equals("Ranger")) {
                 classImage.setImageResource(R.drawable.ranger);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.ranger_description);
+                Ranger temp = new Ranger(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Ranger";
             }
             else if (savedClass.equals("Rogue")) {
                 classImage.setImageResource(R.drawable.rogue);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.rogue_description);
+                Rogue temp = new Rogue(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Rogue";
             }
             else if (savedClass.equals("Sorcerer")) {
                 classImage.setImageResource(R.drawable.sorcerer);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.sorcerer_description);
+                Sorcerer temp = new Sorcerer(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Sorcerer";
             }
             else if (savedClass.equals("Warlock")) {
                 classImage.setImageResource(R.drawable.warlock);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.warlock_description);
+                Warlock temp = new Warlock(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Warlock";
             }
             else if (savedClass.equals("Wizard")) {
                 classImage.setImageResource(R.drawable.wizard);
+                classDescription.scrollTo(0, 0);
                 classDescription.setText(R.string.wizard_description);
+                Wizard temp = new Wizard (new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedClass = "Wizard";
             }
@@ -366,6 +482,28 @@ public class chooseClass extends Activity {
             startActivity(intent);
         }
     };
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_help:
+                showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+    private void showHelp(){
+        Intent intent = new Intent(context, helpScreen.class);
+        intent.putExtra("Flag", helpScreen.ROLE_HELP);
+        startActivity(intent);
+    }
 
     @Override
     public void onBackPressed() {

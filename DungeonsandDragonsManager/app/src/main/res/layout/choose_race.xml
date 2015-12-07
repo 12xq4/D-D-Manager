@@ -44,19 +44,17 @@
         android:layout_height="650px"
         android:text="@string/other_Info"
         android:id="@+id/otherInformation"
-        android:textSize="50px"
+        android:textSize="25px"
         android:scrollbars = "vertical"
-        android:paddingLeft="10px"
-        android:paddingRight="10px"
-        android:background="@drawable/border"
+        android:padding="90px"
+        android:background="@drawable/bordervertical"
         android:layout_above="@+id/raceDescription"
         android:layout_toRightOf="@+id/raceProceed"
-        android:layout_toEndOf="@+id/raceProceed"
-        android:layout_marginBottom="44dp" />
+        android:layout_toEndOf="@+id/raceProceed" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="350px"
+        android:layout_height="500px"
         android:text="@string/raceDescription"
         android:id="@+id/raceDescription"
         android:layout_above="@+id/raceProceed"
@@ -64,9 +62,12 @@
         android:layout_alignEnd="@+id/otherInformation"
         android:layout_alignLeft="@+id/raceImage"
         android:layout_alignStart="@+id/raceImage"
-        android:paddingLeft="10px"
-        android:paddingRight="10px"
-        android:background="@drawable/border"/>
+        android:paddingTop="100px"
+        android:paddingLeft="160px"
+        android:paddingRight="160px"
+        android:paddingBottom="100px"
+        android:background="@drawable/borderimage"
+        android:layout_marginTop="30px"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -74,8 +75,7 @@
         android:text="@string/proceed"
         android:id="@+id/raceProceed"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80px"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="60dp"
         android:enabled="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -86,6 +86,8 @@
         android:id="@+id/backgroundButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
         android:background="#0000"/>
 
     <ImageButton
@@ -95,6 +97,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/backgroundButton"
         android:layout_toStartOf="@+id/backgroundButton"
+        android:layout_marginLeft="15px"
         android:background="#0000"/>
 
     <ImageButton
@@ -113,6 +116,7 @@
         android:layout_alignTop="@+id/backgroundButton"
         android:layout_toRightOf="@+id/backgroundButton"
         android:layout_toEndOf="@+id/backgroundButton"
+        android:layout_marginRight="15px"
         android:background="#0000"/>
 
     <ImageButton

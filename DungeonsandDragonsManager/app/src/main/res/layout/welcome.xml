@@ -9,10 +9,10 @@
         android:gravity="center_horizontal"
         android:text="@string/dd_Manager"
         android:id="@+id/dnd"
-        android:textSize="200px"
-        android:typeface="serif"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="176dp"
+        android:textSize="200px" />
 
 
 </RelativeLayout>

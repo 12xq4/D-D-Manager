@@ -32,9 +32,9 @@ public abstract class Background {
 
     abstract void setEquipments();
     String displayEquipments() {
-        String result = "Equipments: ";
+        String result = "Equipments: \n";
         for (String equi: equipment){
-            result += "            " +equi + "\n";
+            result += equi + "\n";
         }
         return result;
     }
@@ -48,6 +48,6 @@ public abstract class Background {
     }
 
     public String toString(){
-        return name + "\n" + displayLanguages() + displaySkills() + displayEquipments() + feature;
+        return name + "\n" + displayLanguages() + "\n" + displaySkills() + "\n"  + displayEquipments() + "\n"  + feature;
     }
 }

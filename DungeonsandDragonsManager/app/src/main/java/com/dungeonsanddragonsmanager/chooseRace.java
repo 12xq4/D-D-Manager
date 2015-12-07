@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.media.Image;
+// import android.media.Image;
 import android.os.Bundle;
 // import android.support.v7.widget.LinearLayoutManager;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -22,6 +25,17 @@ import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 // import android.support.v7.widget.RecyclerView;
+
+import com.dungeonsanddragonsmanager.BackEnd.Races.Dragonborn;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Dwarf;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Elf;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Gnome;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Halfelf;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Halfling;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Halforc;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Human;
+import com.dungeonsanddragonsmanager.BackEnd.Races.Tiefling;
+import com.dungeonsanddragonsmanager.BackEnd.Stat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +63,7 @@ public class chooseRace extends Activity {
     ImageView raceImage;
 
     TextView raceDescription;
+    TextView otherDescription;
 
     Button proceed;
 
@@ -71,6 +86,8 @@ public class chooseRace extends Activity {
 
         raceDescription = (TextView) findViewById(R.id.raceDescription);
         raceDescription.setMovementMethod(new ScrollingMovementMethod());
+        otherDescription = (TextView) findViewById(R.id.otherInformation);
+        otherDescription.setMovementMethod(new ScrollingMovementMethod());
 
         hsr = (HorizontalScrollView) findViewById(R.id.horizontalScrollView);
 
@@ -108,7 +125,11 @@ public class chooseRace extends Activity {
                 int scrollX = (dwarfButton.getLeft() - (width / 2)) + (dwarfButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.dwarf);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.dwarf_description);
+                Dwarf temp = new Dwarf(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Dwarf";
             }
@@ -122,7 +143,11 @@ public class chooseRace extends Activity {
                 int scrollX = (elfButton.getLeft() - (width / 2)) + (elfButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.elf);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.elf_description);
+                Elf temp = new Elf(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Elf";
             }
@@ -136,7 +161,11 @@ public class chooseRace extends Activity {
                 int scrollX = (halflingButton.getLeft() - (width / 2)) + (halflingButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.halfling);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.halfling_description);
+                Halfling temp = new Halfling(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Halfling";
             }
@@ -150,7 +179,11 @@ public class chooseRace extends Activity {
                 int scrollX = (humanButton.getLeft() - (width / 2)) + (humanButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.human);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.human_description);
+                Human temp = new Human(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Human";
             }
@@ -164,7 +197,11 @@ public class chooseRace extends Activity {
                 int scrollX = (dragonbornButton.getLeft() - (width / 2)) + (dragonbornButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.dragonborn);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.dragonborn_description);
+                Dragonborn temp = new Dragonborn(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Dragonborn";
             }
@@ -178,7 +215,11 @@ public class chooseRace extends Activity {
                 int scrollX = (gnomeButton.getLeft() - (width / 2)) + (gnomeButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.gnome);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.gnome_description);
+                Gnome temp = new Gnome(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Gnome";
             }
@@ -192,7 +233,11 @@ public class chooseRace extends Activity {
                 int scrollX = (halfElfButton.getLeft() - (width / 2)) + (halfElfButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.half_elf);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.half_elf_description);
+                Halfelf temp = new Halfelf(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Half Elf";
             }
@@ -206,7 +251,11 @@ public class chooseRace extends Activity {
                 int scrollX = (halfOrcButton.getLeft() - (width / 2)) + (halfOrcButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.half_orc);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.half_orc_description);
+                Halforc temp = new Halforc(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Half Orc";
             }
@@ -220,7 +269,11 @@ public class chooseRace extends Activity {
                 int scrollX = (tieflingButton.getLeft() - (width / 2)) + (tieflingButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.tiefling);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.tiefling_description);
+                Tiefling temp = new Tiefling(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Tiefling";
             }
@@ -240,7 +293,11 @@ public class chooseRace extends Activity {
             savedRace = myCharacter[0];
             if ( savedRace.equals("Dragonborn") ) {
                 raceImage.setImageResource(R.drawable.dragonborn);
+                raceDescription.scrollTo(0,0);
                 raceDescription.setText(R.string.dragonborn_description);
+                Dragonborn temp = new Dragonborn(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Dragonborn";
             }
@@ -248,7 +305,11 @@ public class chooseRace extends Activity {
                 int scrollX = (dwarfButton.getLeft() - (width / 2)) + (dwarfButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.dwarf);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.dwarf_description);
+                Dwarf temp = new Dwarf(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Dwarf";
             }
@@ -256,7 +317,11 @@ public class chooseRace extends Activity {
                 int scrollX = (elfButton.getLeft() - (width / 2)) + (elfButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.elf);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.elf_description);
+                Elf temp = new Elf(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Elf";
             }
@@ -264,7 +329,11 @@ public class chooseRace extends Activity {
                 int scrollX = (gnomeButton.getLeft() - (width / 2)) + (gnomeButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.gnome);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.gnome_description);
+                Gnome temp = new Gnome(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Gnome";
             }
@@ -272,7 +341,11 @@ public class chooseRace extends Activity {
                 int scrollX = (halfElfButton.getLeft() - (width / 2)) + (halfElfButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.half_elf);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.half_elf_description);
+                Halfelf temp = new Halfelf(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Half Elf";
             }
@@ -280,7 +353,11 @@ public class chooseRace extends Activity {
                 int scrollX = (halflingButton.getLeft() - (width / 2)) + (halflingButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.halfling);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.halfling_description);
+                Halfling temp = new Halfling(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Halfling";
             }
@@ -288,7 +365,11 @@ public class chooseRace extends Activity {
                 int scrollX = (halfOrcButton.getLeft() - (width / 2)) + (halfOrcButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.half_orc);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.half_orc_description);
+                Halforc temp = new Halforc(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Half Orc";
             }
@@ -296,7 +377,11 @@ public class chooseRace extends Activity {
                 int scrollX = (humanButton.getLeft() - (width / 2)) + (humanButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.human);
+                raceDescription.scrollTo(0, 0);
                 raceDescription.setText(R.string.human_description);
+                Human temp = new Human(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Human";
             }
@@ -304,11 +389,38 @@ public class chooseRace extends Activity {
                 int scrollX = (tieflingButton.getLeft() - (width / 2)) + (tieflingButton.getWidth() / 2);
                 hsr.smoothScrollTo(scrollX, 0);
                 raceImage.setImageResource(R.drawable.tiefling);
+                raceDescription.scrollTo(0,0);
                 raceDescription.setText(R.string.tiefling_description);
+                Tiefling temp = new Tiefling(new Stat(0,0,0,0,0,0));
+                otherDescription.scrollTo(0, 0);
+                otherDescription.setText(temp.toString());
                 proceed.setEnabled(true);
                 selectedRace = "Tiefling";
             }
         }
+    }
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_help:
+                showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+
+    private void showHelp(){
+        Intent intent = new Intent(context, helpScreen.class);
+        intent.putExtra("Flag", helpScreen.RACE_HELP);
+        intent.putExtra("myCharacter", myCharacter);
+        startActivity(intent);
     }
 
     private class proceedButtonListener implements View.OnClickListener {

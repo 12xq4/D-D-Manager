@@ -26,7 +26,7 @@ public class Ranger extends Role {
                 "You gain advantage on Wisdom checks to track your favored enemies, as well as on Intelligence checks to recall information about them." +
                 "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all." +
                 "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level."));
-        skillset.add(new Skills("Natural Explorer","Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or W isdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you�re proficient in." +
+        skillset.add(new Skills("Natural Explorer","Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or W isdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in." +
                 "While traveling for an hour or more in your favored terrain, you gain the following benefits:" +
                 "   - Difficult terrain doesn't slow your group's travel." +
                 "   - Your group can't become lost except by magical means." +
